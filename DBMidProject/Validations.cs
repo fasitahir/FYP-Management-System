@@ -32,7 +32,7 @@ namespace DBMidProject
         public static bool IntValidation(string value)
         {
 
-            if (int.TryParse(value.ToString(), out int intValue))
+            if (long.TryParse(value.ToString(), out long longValue))
             {
                 return true;
             }

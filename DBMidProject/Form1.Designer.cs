@@ -36,8 +36,10 @@
             this.viewStd_btn = new System.Windows.Forms.Button();
             this.sidemenu_panel = new System.Windows.Forms.Panel();
             this.logo_panel = new System.Windows.Forms.Panel();
-            this.manageStd1 = new DBMidProject.AddStd();
+            this.updateStdUC1 = new DBMidProject.UpdateStdUC();
+            this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
             this.deleteStdUC1 = new DBMidProject.DeleteStdUC();
+            this.manageStd1 = new DBMidProject.AddStd();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +95,7 @@
             this.updateStd_btn.TabIndex = 4;
             this.updateStd_btn.Text = "Update";
             this.updateStd_btn.UseVisualStyleBackColor = false;
+            this.updateStd_btn.Click += new System.EventHandler(this.updateStd_btn_Click);
             // 
             // addStd_btn
             // 
@@ -118,6 +121,7 @@
             this.viewStd_btn.TabIndex = 3;
             this.viewStd_btn.Text = "View";
             this.viewStd_btn.UseVisualStyleBackColor = false;
+            this.viewStd_btn.Click += new System.EventHandler(this.viewStd_btn_Click);
             // 
             // sidemenu_panel
             // 
@@ -143,13 +147,21 @@
             this.logo_panel.TabIndex = 2;
             this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
             // 
-            // manageStd1
+            // updateStdUC1
             // 
-            this.manageStd1.BackColor = System.Drawing.Color.Wheat;
-            this.manageStd1.Location = new System.Drawing.Point(153, 2);
-            this.manageStd1.Name = "manageStd1";
-            this.manageStd1.Size = new System.Drawing.Size(665, 447);
-            this.manageStd1.TabIndex = 2;
+            this.updateStdUC1.BackColor = System.Drawing.Color.MistyRose;
+            this.updateStdUC1.Location = new System.Drawing.Point(153, 2);
+            this.updateStdUC1.Name = "updateStdUC1";
+            this.updateStdUC1.Size = new System.Drawing.Size(665, 447);
+            this.updateStdUC1.TabIndex = 6;
+            // 
+            // viewAllStdUC1
+            // 
+            this.viewAllStdUC1.BackColor = System.Drawing.Color.Bisque;
+            this.viewAllStdUC1.Location = new System.Drawing.Point(153, 0);
+            this.viewAllStdUC1.Name = "viewAllStdUC1";
+            this.viewAllStdUC1.Size = new System.Drawing.Size(665, 447);
+            this.viewAllStdUC1.TabIndex = 5;
             // 
             // deleteStdUC1
             // 
@@ -159,12 +171,22 @@
             this.deleteStdUC1.Size = new System.Drawing.Size(665, 447);
             this.deleteStdUC1.TabIndex = 4;
             // 
+            // manageStd1
+            // 
+            this.manageStd1.BackColor = System.Drawing.Color.Wheat;
+            this.manageStd1.Location = new System.Drawing.Point(153, 2);
+            this.manageStd1.Name = "manageStd1";
+            this.manageStd1.Size = new System.Drawing.Size(665, 447);
+            this.manageStd1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(817, 450);
+            this.Controls.Add(this.updateStdUC1);
+            this.Controls.Add(this.viewAllStdUC1);
             this.Controls.Add(this.deleteStdUC1);
             this.Controls.Add(this.sidemenu_panel);
             this.Controls.Add(this.manageStd1);
@@ -189,6 +211,8 @@
         private System.Windows.Forms.Panel logo_panel;
         private System.Windows.Forms.Button deleteStd_btn;
         private DeleteStdUC deleteStdUC1;
+        private ViewAllStdUC viewAllStdUC1;
+        private UpdateStdUC updateStdUC1;
     }
 }
 

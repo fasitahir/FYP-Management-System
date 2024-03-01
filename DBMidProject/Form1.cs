@@ -15,9 +15,7 @@ namespace DBMidProject
         public Form1()
         {
             InitializeComponent();
-            stdSubMenu.Hide();
-            manageStd1.Hide();
-            deleteStdUC1.Hide();
+            hideItems();
         }
 
         private void ManageStd_Click(object sender, EventArgs e)
@@ -49,6 +47,8 @@ namespace DBMidProject
             stdSubMenu.Hide();
             manageStd1.Hide();
             deleteStdUC1.Hide();
+            viewAllStdUC1.Hide();
+            updateStdUC1.Hide();
         }
 
         private void ManageStd_MouseEnter(object sender, EventArgs e)
@@ -66,6 +66,22 @@ namespace DBMidProject
             hideItems();
             deleteStdUC1.Show();
             deleteStdUC1.BringToFront();
+        }
+
+        private void viewStd_btn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            viewAllStdUC1.Show();
+            viewAllStdUC1.BringToFront();
+            viewAllStdUC1.ShowCurrentStudents();
+        }
+
+        private void updateStd_btn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            updateStdUC1.Show();
+            updateStdUC1.BringToFront();
+            updateStdUC1.ShowData();
         }
     }
 }

@@ -17,6 +17,7 @@ namespace DBMidProject
         {
             InitializeComponent();
             showData();
+            stdRegNo.KeyDown += TextBox_KeyDown;
         }
 
         private void deleteStdBtn_Click(object sender, EventArgs e)
@@ -67,6 +68,28 @@ namespace DBMidProject
                 
                 stdRegNo.Text = regNo;
                 
+            }
+        }
+
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+
+                // Check if the current textbox is the last one
+                if (sender == stdRegNo)
+                {
+                    deleteStdBtn.PerformClick();
+                }
+
+                else
+                {
+                    // Move to the next control in the tab index order
+                    SelectNextControl((Control)sender, true, true, true, true);
+                }
             }
         }
     }

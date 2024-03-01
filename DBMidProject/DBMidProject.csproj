@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,7 +68,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateStdUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateStdUC.Designer.cs">
+      <DependentUpon>UpdateStdUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validations.cs" />
+    <Compile Include="ViewAllStdUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewAllStdUC.Designer.cs">
+      <DependentUpon>ViewAllStdUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DeleteStdUC.resx">
       <DependentUpon>DeleteStdUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +100,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdateStdUC.resx">
+      <DependentUpon>UpdateStdUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllStdUC.resx">
+      <DependentUpon>ViewAllStdUC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

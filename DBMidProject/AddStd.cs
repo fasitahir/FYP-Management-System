@@ -72,11 +72,11 @@ namespace DBMidProject
 
                 string selectedGender = stdGender.Text;
 
-                if (selectedGender == "male")
+                if (selectedGender.ToLower() == "male")
                 {
                     gender = 1;
                 }
-                else if (selectedGender == "female")
+                else if (selectedGender.ToLower() == "female")
                 {
                     gender = 2;
                 }
