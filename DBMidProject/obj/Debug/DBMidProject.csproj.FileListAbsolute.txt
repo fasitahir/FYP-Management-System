@@ -9,3 +9,15 @@ D:\FasiTahir\4th Semester\DB\Projects\DBMidProject\obj\Debug\DBMidProject.csproj
 D:\FasiTahir\4th Semester\DB\Projects\DBMidProject\obj\Debug\DBMidProject.csproj.CoreCompileInputs.cache
 D:\FasiTahir\4th Semester\DB\Projects\DBMidProject\obj\Debug\DBMidProject.exe
 D:\FasiTahir\4th Semester\DB\Projects\DBMidProject\obj\Debug\DBMidProject.pdb
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\bin\Debug\DBMidProject.exe.config
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\bin\Debug\DBMidProject.exe
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\bin\Debug\DBMidProject.pdb
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.csproj.AssemblyReference.cache
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.Form1.resources
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.Properties.Resources.resources
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.csproj.GenerateResource.cache
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.csproj.CoreCompileInputs.cache
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.exe
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.pdb
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.DeleteStdUC.resources
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.AddStd.resources
