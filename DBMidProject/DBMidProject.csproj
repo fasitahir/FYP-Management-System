@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAdvisor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddAdvisor.Designer.cs">
+      <DependentUpon>AddAdvisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuration.cs" />
     <Compile Include="DeleteStdUC.cs">
       <SubType>UserControl</SubType>
@@ -75,12 +81,21 @@
       <DependentUpon>UpdateStdUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Validations.cs" />
+    <Compile Include="ViewAdvisorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewAdvisorUC.Designer.cs">
+      <DependentUpon>ViewAdvisorUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAllStdUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ViewAllStdUC.Designer.cs">
       <DependentUpon>ViewAllStdUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAdvisor.resx">
+      <DependentUpon>AddAdvisor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteStdUC.resx">
       <DependentUpon>DeleteStdUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="UpdateStdUC.resx">
       <DependentUpon>UpdateStdUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAdvisorUC.resx">
+      <DependentUpon>ViewAdvisorUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllStdUC.resx">
       <DependentUpon>ViewAllStdUC.cs</DependentUpon>

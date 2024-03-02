@@ -23,3 +23,5 @@ D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidPr
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.AddStd.resources
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.ViewAllStdUC.resources
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.UpdateStdUC.resources
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.AddAdvisor.resources
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.ViewAdvisorUC.resources

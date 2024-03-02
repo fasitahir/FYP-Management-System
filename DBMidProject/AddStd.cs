@@ -97,7 +97,7 @@ namespace DBMidProject
                 bool isregNo = !string.IsNullOrWhiteSpace(regNo);
                 bool isemail = !string.IsNullOrWhiteSpace(email);
 
-                if (isfname && islname && iscontact && isregNo && isemail)
+                if (isfname && islname && iscontact && isregNo && isemail && gender != 0)
                 {
                     cmd.Parameters.AddWithValue("@FirstName", stdFirstName.Text);
                     cmd.Parameters.AddWithValue("@LastName", stdLastName.Text);
@@ -125,6 +125,10 @@ namespace DBMidProject
                     else if (!isregNo && !isemail)
                     {
                         MessageBox.Show("You can not leave any field empty");
+                    }
+                    else if(gender == 0)
+                    {
+                        MessageBox.Show("Please select Gender");
                     }
                 }
             }

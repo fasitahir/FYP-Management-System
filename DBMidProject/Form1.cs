@@ -45,10 +45,13 @@ namespace DBMidProject
         private void hideItems()
         {
             stdSubMenu.Hide();
+            advSubmenu.Hide();
             manageStd1.Hide();
             deleteStdUC1.Hide();
             viewAllStdUC1.Hide();
             updateStdUC1.Hide();
+            addAdvisor1.Hide();
+            viewAdvisorUC1.Hide();
         }
 
         private void ManageStd_MouseEnter(object sender, EventArgs e)
@@ -82,6 +85,26 @@ namespace DBMidProject
             updateStdUC1.Show();
             updateStdUC1.BringToFront();
             updateStdUC1.ShowData();
+        }
+
+        private void addAdvBtn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            addAdvisor1.Show();
+            addAdvisor1.BringToFront();
+        }
+
+        private void manageAdvBtn_Click(object sender, EventArgs e)
+        {
+            advSubmenu.Show();
+        }
+
+        private void viewAdvBtn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            viewAdvisorUC1.Show();
+            viewAdvisorUC1.BringToFront();
+            viewAdvisorUC1.ShowCurrentData();
         }
     }
 }
