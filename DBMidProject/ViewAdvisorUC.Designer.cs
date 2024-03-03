@@ -38,6 +38,7 @@
             this.allStdBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.advisorDataView = new System.Windows.Forms.DataGridView();
+            this.deleteAdvBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advisorDataView)).BeginInit();
             this.SuspendLayout();
@@ -58,11 +59,11 @@
             // 
             this.noteLabel.AutoSize = true;
             this.noteLabel.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noteLabel.Location = new System.Drawing.Point(152, 219);
+            this.noteLabel.Location = new System.Drawing.Point(217, 228);
             this.noteLabel.Name = "noteLabel";
-            this.noteLabel.Size = new System.Drawing.Size(343, 17);
+            this.noteLabel.Size = new System.Drawing.Size(211, 17);
             this.noteLabel.TabIndex = 45;
-            this.noteLabel.Text = "Note: Advisors with \'*\' at end of Designations are deleted";
+            this.noteLabel.Text = "Note: Advisors with \'*\'  are deleted";
             // 
             // panel5
             // 
@@ -106,7 +107,7 @@
             // 
             this.viewCurrent_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewCurrent_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.viewCurrent_btn.Location = new System.Drawing.Point(51, 182);
+            this.viewCurrent_btn.Location = new System.Drawing.Point(51, 171);
             this.viewCurrent_btn.Name = "viewCurrent_btn";
             this.viewCurrent_btn.Size = new System.Drawing.Size(129, 23);
             this.viewCurrent_btn.TabIndex = 40;
@@ -118,7 +119,7 @@
             // 
             this.allStdBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.allStdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.allStdBtn.Location = new System.Drawing.Point(458, 182);
+            this.allStdBtn.Location = new System.Drawing.Point(474, 171);
             this.allStdBtn.Name = "allStdBtn";
             this.allStdBtn.Size = new System.Drawing.Size(129, 23);
             this.allStdBtn.TabIndex = 39;
@@ -143,12 +144,26 @@
             this.advisorDataView.Name = "advisorDataView";
             this.advisorDataView.Size = new System.Drawing.Size(665, 199);
             this.advisorDataView.TabIndex = 0;
+            this.advisorDataView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.advisorDataView_CellClick);
+            // 
+            // deleteAdvBtn
+            // 
+            this.deleteAdvBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.deleteAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deleteAdvBtn.Location = new System.Drawing.Point(261, 193);
+            this.deleteAdvBtn.Name = "deleteAdvBtn";
+            this.deleteAdvBtn.Size = new System.Drawing.Size(129, 23);
+            this.deleteAdvBtn.TabIndex = 47;
+            this.deleteAdvBtn.Text = "Delete Advisor";
+            this.deleteAdvBtn.UseVisualStyleBackColor = false;
+            this.deleteAdvBtn.Click += new System.EventHandler(this.deleteAdvBtn_Click);
             // 
             // ViewAdvisorUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
+            this.Controls.Add(this.deleteAdvBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.noteLabel);
             this.Controls.Add(this.panel5);
@@ -179,5 +194,6 @@
         private System.Windows.Forms.Button allStdBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView advisorDataView;
+        private System.Windows.Forms.Button deleteAdvBtn;
     }
 }

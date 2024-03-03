@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -10,151 +9,180 @@ namespace DBMidProject
         public AddAdvisor()
         {
             InitializeComponent();
-            ShowData();
             advSalary.KeyDown += TextBox_KeyDown;
             designationAdv.KeyDown += TextBox_KeyDown;
-            advId.KeyDown += TextBox_KeyDown;
+            advFirstName.KeyDown += TextBox_KeyDown;
+            advLastName.KeyDown += TextBox_KeyDown;
+            advContact.KeyDown += TextBox_KeyDown;
+            advEmail.KeyDown += TextBox_KeyDown;
+            advDob.KeyDown += TextBox_KeyDown;
+            advGender.KeyDown += TextBox_KeyDown;
         }
 
         private void addStdBtn_Click(object sender, EventArgs e)
         {
             int designation;
+            int gender;
             var con = Configuration.getInstance().getConnection();
-            
-            string id = advId.Text;
 
-            bool isId = Validation.IntValidation(id);
-            if (!isId)
+
+            SqlCommand cmd = new SqlCommand(
+            "INSERT INTO Person " +
+            "VALUES (@FirstName, @LastName, @Contact, @Email, @DateOfBirth, @Gender)" +
+            "INSERT INTO Advisor " +
+            "VALUES ((SELECT MAX(Id) FROM Person), @Designation, @Salary) ", con);
+
+            string selectedDesignation = designationAdv.Text;
+
+            if (selectedDesignation.ToLower() == "professor")
             {
-                MessageBox.Show("Id can only have integers");
-                return;
+                designation = 6;
             }
-
-            SqlCommand check = new SqlCommand("SELECT COUNT(Id) FROM Advisor WHERE Id = @Id", con);
-            check.Parameters.AddWithValue("@Id", int.Parse(advId.Text));
-            
-            int checkId = (int)check.ExecuteScalar();
-
-            if (checkId == 0)
+            else if (selectedDesignation.ToLower() == "associate professor")
             {
-
-
-                SqlCommand cmd = new SqlCommand(
-                "INSERT INTO Advisor " +
-                "VALUES (@Id, @Designation, @Salary)", con);
-
-                string selectedDesignation = designationAdv.Text;
-
-                if (selectedDesignation.ToLower() == "professor")
-                {
-                    designation = 6;
-                }
-                else if (selectedDesignation.ToLower() == "associate professor")
-                {
-                    designation = 7;
-                }
-                else if (selectedDesignation.ToLower() == "assisstant professor")
-                {
-                    designation = 8;
-                }
-                else if (selectedDesignation.ToLower() == "lecturer")
-                {
-                    designation = 9;
-                }
-                else if (selectedDesignation.ToLower() == "industry professional")
-                {
-                    designation = 10;
-                }
-                else
-                {
-                    designation = 0;
-                }
-
-                string salary = advSalary.Text;
-                bool isSalary = Validation.DoubleValidation(salary);
-                
-                if (isSalary && designation != 0)
-                {
-
-                    cmd.Parameters.AddWithValue("@Salary", float.Parse(advSalary.Text));
-                    cmd.Parameters.AddWithValue("@Designation", designation);
-                    cmd.Parameters.AddWithValue("@Id", int.Parse(advId.Text));
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Successfully saved");
-                    ShowData();
-                }
-
-                else
-                {
-
-                    if (!isSalary)
-                    {
-                        MessageBox.Show("Salary can not have alphabets or symbol and it can not be empty");
-                    }
-                    else if (designation == 0)
-                    {
-                        MessageBox.Show("Please Select Designation");
-                    }
-                }
+                designation = 7;
+            }
+            else if (selectedDesignation.ToLower() == "assisstant professor")
+            {
+                designation = 8;
+            }
+            else if (selectedDesignation.ToLower() == "lecturer")
+            {
+                designation = 9;
+            }
+            else if (selectedDesignation.ToLower() == "industry professional")
+            {
+                designation = 10;
             }
             else
             {
-                MessageBox.Show("Advisor with same Id already exist");
+                designation = 0;
             }
 
-        }
+            string selectedGender = advGender.Text;
 
-
-        private void ShowData()
-        {
-            var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select Id, Salary, Designation " +
-                "FROM Advisor " +
-                "WHERE Designation NOT LIKE '%*'", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            // Add a new column for the string representation of Designation
-            dt.Columns.Add("DesignationString", typeof(string));
-
-            foreach (DataRow row in dt.Rows)
+            if (selectedGender.ToLower() == "male")
             {
-                int designationValue = Convert.ToInt32(row["Designation"]);
+                gender = 1;
+            }
+            else if (selectedGender.ToLower() == "female")
+            {
+                gender = 2;
+            }
+            else
+            {
+                gender = 0;
+            }
 
-                switch (designationValue)
+            string fname = advFirstName.Text;
+            string lname = advLastName.Text;
+            string contact = advContact.Text;
+            string email = advEmail.Text;
+            string salary = advSalary.Text;
+
+            bool isfname = Validation.NameValidation(fname);
+            bool islname = Validation.NameValidation(lname);
+            bool iscontact = Validation.IntValidation(contact);
+            bool isemail = !string.IsNullOrWhiteSpace(email);
+            bool isSalary = Validation.DoubleValidation(salary);
+
+
+
+
+            if (isfname && (islname || string.IsNullOrWhiteSpace(lname))
+                && (iscontact || string.IsNullOrWhiteSpace(contact)) && isemail 
+                && (isSalary || string.IsNullOrWhiteSpace(salary)) && designation != 0)
+            {
+                cmd.Parameters.AddWithValue("@FirstName", fname);
+
+                //Add Last Name and Allow Null value
+                if (string.IsNullOrWhiteSpace(lname))
                 {
-                    case 6:
-                        row["DesignationString"] = "Professor";
-                        break;
-                    case 7:
-                        row["DesignationString"] = "Associate Professor";
-                        break;
-                    case 8:
-                        row["DesignationString"] = "Assistant Professor";
-                        break;
-                    case 9:
-                        row["DesignationString"] = "Lecturer";
-                        break;
-                    case 10:
-                        row["DesignationString"] = "Industrial Professional";
-                        break;
-                    default:
-                        break;
+                    cmd.Parameters.AddWithValue("@LastName", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@LastName", lname);
+                }
+
+                //Add Contact and Allow Null value
+                if (string.IsNullOrWhiteSpace(contact))
+                {
+
+                    cmd.Parameters.AddWithValue("@Contact", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Contact", contact);
+                }
+
+                cmd.Parameters.AddWithValue("@Email", email);
+
+                //Add Gender and Allow Null value
+                
+                if (gender == 0)
+                {
+                    cmd.Parameters.AddWithValue("@Gender", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Gender", gender);
+                }
+
+                //Add Date of birth and alow null value
+                if (advDob.Value.Date >= DateTime.Now.Date)
+                {
+                    cmd.Parameters.AddWithValue("@DateOfBirth", advDob.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@DateOfBirth", DBNull.Value);
+                }
+                if(string.IsNullOrWhiteSpace(salary))
+                {
+                    cmd.Parameters.AddWithValue("@Salary", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Salary", float.Parse(salary));
+                }
+                cmd.Parameters.AddWithValue("@Designation", designation);
+
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully saved");
+            }
+            //Show error messages
+            else
+            {
+                if (!isfname)
+                {
+                    MessageBox.Show("Name can not have digits or symbol and it can not be empty");
+                }
+                else if(!islname && !string.IsNullOrWhiteSpace(lname))
+                {
+                    MessageBox.Show("Last Name can not have digits or symbol");
+                }
+                else if (!iscontact && !string.IsNullOrWhiteSpace(contact))
+                {
+                    MessageBox.Show("Contact can not have alphabets or symbol");
+                }
+                else if (!isemail)
+                {
+                    MessageBox.Show("You can not leave email empty");
+                }
+                else if (!isSalary && !string.IsNullOrWhiteSpace(salary))
+                {
+                    MessageBox.Show("Salary can not have alphabets or symbol and it can not be empty");
+                }
+                else if (designation == 0)
+                {
+                    MessageBox.Show("Please Select Designation");
                 }
             }
-
-            // Remove the original Designation column if you don't need it anymore
-            dt.Columns.Remove("Designation");
-
-            // Rename the new column to Designation
-            dt.Columns["DesignationString"].ColumnName = "Designation";
-
-            advisorDataView.DataSource = dt;
-            sizeset();
+            
         }
-
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -177,15 +205,5 @@ namespace DBMidProject
             }
         }
 
-
-
-
-        private void sizeset()
-        {
-            for (int i = 0; i < advisorDataView.Columns.Count; i++)
-            {
-                advisorDataView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-        }
     }
 }

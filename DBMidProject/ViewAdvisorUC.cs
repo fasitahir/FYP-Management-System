@@ -13,6 +13,7 @@ namespace DBMidProject
 {
     public partial class ViewAdvisorUC : UserControl
     {
+        int id = 0;
         public ViewAdvisorUC()
         {
             InitializeComponent();
@@ -23,48 +24,15 @@ namespace DBMidProject
         public void ShowCurrentData()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select Id, Salary, Designation " +
-                "FROM Advisor " +
-                "WHERE Designation NOT LIKE '%*'", con);
+            SqlCommand cmd = new SqlCommand("Select A.Id, L.Value AS Designation, Salary, " +
+                "FirstName, LastName, Contact, Email, DateOfBirth, Gender " +
+               "FROM Advisor A " +
+               "JOIN Person P ON P.Id = A.Id " +
+               "JOIN Lookup L ON L.Id = A.Designation " +
+               "WHERE FirstName NOT LIKE '%*'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            // Add a new column for the string representation of Designation
-            dt.Columns.Add("DesignationString", typeof(string));
-
-            foreach (DataRow row in dt.Rows)
-            {
-                int designationValue = Convert.ToInt32(row["Designation"]);
-
-                switch (designationValue)
-                {
-                    case 6:
-                        row["DesignationString"] = "Professor";
-                        break;
-                    case 7:
-                        row["DesignationString"] = "Associate Professor";
-                        break;
-                    case 8:
-                        row["DesignationString"] = "Assistant Professor";
-                        break;
-                    case 9:
-                        row["DesignationString"] = "Lecturer";
-                        break;
-                    case 10:
-                        row["DesignationString"] = "Industrial Professional";
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            // Remove the original Designation column if you don't need it anymore
-            dt.Columns.Remove("Designation");
-
-            // Rename the new column to Designation
-            dt.Columns["DesignationString"].ColumnName = "Designation";
-
             advisorDataView.DataSource = dt;
             sizeset();
             noteLabel.Hide();
@@ -74,48 +42,14 @@ namespace DBMidProject
         private void ShowAllData()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select Id, Salary, Designation " +
-                "FROM Advisor", con);
+            SqlCommand cmd = new SqlCommand("Select A.Id, L.Value AS Designation, Salary, " +
+                "FirstName, LastName, Contact, Email, DateOfBirth, Gender " +
+               "FROM Advisor A " +
+               "JOIN Person P ON P.Id = A.Id " +
+               "JOIN Lookup L ON L.Id = A.Designation ", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            // Add a new column for the string representation of Designation
-            dt.Columns.Add("DesignationString", typeof(string));
-
-            foreach (DataRow row in dt.Rows)
-            {
-                int designationValue = Convert.ToInt32(row["Designation"]);
-
-                switch (designationValue)
-                {
-                    case 6:
-                        row["DesignationString"] = "Professor";
-                        break;
-                    case 7:
-                        row["DesignationString"] = "Associate Professor";
-                        break;
-                    case 8:
-                        row["DesignationString"] = "Assistant Professor";
-                        break;
-                    case 9:
-                        row["DesignationString"] = "Lecturer";
-                        break;
-
-                    case 10:
-                        row["DesignationString"] = "Industrial Professional";
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            // Remove the original Designation column if you don't need it anymore
-            dt.Columns.Remove("Designation");
-
-            // Rename the new column to Designation
-            dt.Columns["DesignationString"].ColumnName = "Designation";
-
             advisorDataView.DataSource = dt;
             sizeset();
             noteLabel.Show();
@@ -164,11 +98,13 @@ namespace DBMidProject
             ShowAllData();
         }
 
+
         private void searchBtn_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
             string searchText =   searchBar.Text.ToLower();
             int search = 0;
+
             if (searchText.ToLower() == "professor")
             {
                 search = 6;
@@ -190,53 +126,58 @@ namespace DBMidProject
                 search = 10;
             }
             
-            SqlCommand cmd = new SqlCommand("SELECT Id, Designation, Salary " +
-                "FROM Advisor " +
-                "WHERE @SearchText LIKE Id OR " +
-                "@SearchText LIKE Designation OR " +
-                "@SearchText LIKE Salary " +
-                "AND Designation NOT LIKE '%*'", con);
+            SqlCommand cmd = new SqlCommand("Select A.Id, L.Value AS Designation, Salary, " +
+                "FirstName, LastName, Contact, Email, DateOfBirth, Gender " +
+                "FROM Advisor A " +
+                "JOIN Person P ON P.Id = A.Id " +
+                "JOIN Lookup L ON L.Id = A.Designation " +
+                "WHERE @SearchText LIKE A.Id OR " +
+                "@SearchDesignation LIKE Designation OR " +
+                "@SearchText LIKE Salary OR @SearchText LIKE LOWER(FirstName) " +
+                "OR @SearchText LIKE LOWER(LastName) OR @SearchText LIKE Contact " +
+                "OR @SearchText LIKE  LOWER(Email) " +
+                "OR @SearchText LIKE CONVERT(NVARCHAR(MAX),DateOfBirth) " +
+                "OR @SearchText LIKE LOWER(Gender)", con);
 
-            cmd.Parameters.AddWithValue("@SearchText", search);
-
+            cmd.Parameters.AddWithValue("@SearchText", searchText);
+            cmd.Parameters.AddWithValue("@SearchDesignation", search);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            // Add a new column for the string representation of Designation
-            dt.Columns.Add("DesignationString", typeof(string));
-
-            foreach (DataRow row in dt.Rows)
-            {
-                int designationValue = Convert.ToInt32(row["Designation"]);
-
-                switch (designationValue)
-                {
-                    case 6:
-                        row["DesignationString"] = "Professor";
-                        break;
-                    case 7:
-                        row["DesignationString"] = "Associate Professor";
-                        break;
-                    case 8:
-                        row["DesignationString"] = "Assistant Professor";
-                        break;
-                    case 9:
-                        row["DesignationString"] = "Lecturer";
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            // Remove the original Designation column if you don't need it anymore
-            dt.Columns.Remove("Designation");
-
-            // Rename the new column to Designation
-            dt.Columns["DesignationString"].ColumnName = "Designation";
-
             advisorDataView.DataSource = dt;
             sizeset();
+        }
+
+        private void deleteAdvBtn_Click(object sender, EventArgs e)
+        {
+            if (id == 0)
+            {
+                MessageBox.Show("Please select tupple which you want to delete");
+                return;
+            }
+
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand delete_cmd = new SqlCommand("UPDATE Person " +
+                "SET FirstName = FirstName + '*' " +
+                "FROM Person P " +
+                "JOIN Advisor A ON P.Id = A.Id " +
+                "WHERE A.Id = @Id", con);
+
+            delete_cmd.Parameters.AddWithValue("@Id", id);
+
+            delete_cmd.ExecuteNonQuery();
+            ShowCurrentData();
+        }
+
+        private void advisorDataView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = advisorDataView.Rows[e.RowIndex];
+                string idString = selectedRow.Cells["Id"].Value.ToString();
+
+                id = int.Parse(idString);
+            }
         }
     }
 }

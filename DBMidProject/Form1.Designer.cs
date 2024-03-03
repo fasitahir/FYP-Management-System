@@ -151,9 +151,9 @@
             this.advSubmenu.Controls.Add(this.updateAdvBtn);
             this.advSubmenu.Controls.Add(this.addAdvBtn);
             this.advSubmenu.Controls.Add(this.viewAdvBtn);
-            this.advSubmenu.Location = new System.Drawing.Point(92, 209);
+            this.advSubmenu.Location = new System.Drawing.Point(83, 209);
             this.advSubmenu.Name = "advSubmenu";
-            this.advSubmenu.Size = new System.Drawing.Size(61, 88);
+            this.advSubmenu.Size = new System.Drawing.Size(70, 88);
             this.advSubmenu.TabIndex = 6;
             // 
             // updateAdvBtn
@@ -163,7 +163,7 @@
             this.updateAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateAdvBtn.Location = new System.Drawing.Point(3, 61);
             this.updateAdvBtn.Name = "updateAdvBtn";
-            this.updateAdvBtn.Size = new System.Drawing.Size(56, 23);
+            this.updateAdvBtn.Size = new System.Drawing.Size(67, 23);
             this.updateAdvBtn.TabIndex = 4;
             this.updateAdvBtn.Text = "Update";
             this.updateAdvBtn.UseVisualStyleBackColor = false;
@@ -175,7 +175,7 @@
             this.addAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addAdvBtn.Location = new System.Drawing.Point(3, 3);
             this.addAdvBtn.Name = "addAdvBtn";
-            this.addAdvBtn.Size = new System.Drawing.Size(56, 23);
+            this.addAdvBtn.Size = new System.Drawing.Size(67, 23);
             this.addAdvBtn.TabIndex = 2;
             this.addAdvBtn.Text = "Add";
             this.addAdvBtn.UseVisualStyleBackColor = false;
@@ -188,9 +188,9 @@
             this.viewAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewAdvBtn.Location = new System.Drawing.Point(3, 32);
             this.viewAdvBtn.Name = "viewAdvBtn";
-            this.viewAdvBtn.Size = new System.Drawing.Size(56, 23);
+            this.viewAdvBtn.Size = new System.Drawing.Size(67, 23);
             this.viewAdvBtn.TabIndex = 3;
-            this.viewAdvBtn.Text = "View";
+            this.viewAdvBtn.Text = "View\\Del";
             this.viewAdvBtn.UseVisualStyleBackColor = false;
             this.viewAdvBtn.Click += new System.EventHandler(this.viewAdvBtn_Click);
             // 

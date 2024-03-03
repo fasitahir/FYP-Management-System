@@ -96,6 +96,7 @@ namespace DBMidProject
 
         private void manageAdvBtn_Click(object sender, EventArgs e)
         {
+            stdSubMenu.Hide();
             advSubmenu.Show();
         }
 
