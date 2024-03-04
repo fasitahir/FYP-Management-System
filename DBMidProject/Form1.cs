@@ -20,6 +20,7 @@ namespace DBMidProject
 
         private void ManageStd_Click(object sender, EventArgs e)
         {
+            advSubmenu.Hide();
             stdSubMenu.Show();
             stdSubMenu.BringToFront();
         }
@@ -34,6 +35,7 @@ namespace DBMidProject
         private void sidemenu_panel_Click(object sender, EventArgs e)
         {
             stdSubMenu.Hide();
+            advSubmenu.Hide();
         }
 
 
@@ -52,6 +54,7 @@ namespace DBMidProject
             updateStdUC1.Hide();
             addAdvisor1.Hide();
             viewAdvisorUC1.Hide();
+            updateAdvUC1.Hide();
         }
 
         private void ManageStd_MouseEnter(object sender, EventArgs e)
@@ -106,6 +109,13 @@ namespace DBMidProject
             viewAdvisorUC1.Show();
             viewAdvisorUC1.BringToFront();
             viewAdvisorUC1.ShowCurrentData();
+        }
+
+        private void updateAdvBtn_Click(object sender, EventArgs e)
+        {
+            updateAdvUC1.Show();
+            updateAdvUC1.BringToFront();
+            updateAdvUC1.ShowData();
         }
     }
 }

@@ -74,6 +74,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateAdvUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateAdvUC.Designer.cs">
+      <DependentUpon>UpdateAdvUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStdUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdateAdvUC.resx">
+      <DependentUpon>UpdateAdvUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateStdUC.resx">
       <DependentUpon>UpdateStdUC.cs</DependentUpon>
     </EmbeddedResource>

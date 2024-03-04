@@ -51,12 +51,25 @@ namespace DBMidProject
                 {
                     gender = "Male";
                 }
-                else
+                else if(gender == "2")
                 {
                     gender = "Female";
                 }
+                else
+                {
+                    gender = null;
+                }
                 stdGender.Text = gender;
-                stdDob.Value = DateTime.Parse(dob);
+
+                if(!string.IsNullOrWhiteSpace(dob))
+                {
+
+                    stdDob.Value = DateTime.Parse(dob);
+                }
+                else
+                {
+                    stdDob.Value = DateTime.Now;
+                }
 
             }
         }
@@ -88,6 +101,12 @@ namespace DBMidProject
 
         private void updateStdBtn_Click(object sender, EventArgs e)
         {
+            if(id == 0)
+            {
+                MessageBox.Show("Please select a row from table to update it");
+                return;
+            }
+
             int gender;
             var con = Configuration.getInstance().getConnection();
 
@@ -110,6 +129,7 @@ namespace DBMidProject
             "UPDATE Student " +
             "SET RegistrationNo = @RegistrationNo " +
             "WHERE @Id = Id", con);
+
 
             string selectedGender = stdGender.Text;
 
@@ -138,17 +158,53 @@ namespace DBMidProject
             bool isregNo = !string.IsNullOrWhiteSpace(regNo);
             bool isemail = !string.IsNullOrWhiteSpace(email);
 
-            if (isfname && islname && iscontact && isregNo && isemail)
+            if (isfname && (islname || string.IsNullOrWhiteSpace(lname))
+            && (iscontact || string.IsNullOrWhiteSpace(contact)) && isemail && isregNo)
             {
-                cmd.Parameters.AddWithValue("@FirstName", stdFirstName.Text);
-                cmd.Parameters.AddWithValue("@LastName", stdLastName.Text);
-                cmd.Parameters.AddWithValue("@Contact", stdContact.Text);
-                cmd.Parameters.AddWithValue("@Email", stdEmail.Text);
-                cmd.Parameters.AddWithValue("@Gender", gender);
-                cmd.Parameters.AddWithValue("@DateOfBirth", stdDob.Value);
-                cmd.Parameters.AddWithValue("@RegistrationNo", stdRegNo.Text);
-                cmd.Parameters.AddWithValue("@Id", id);
+                cmd.Parameters.AddWithValue("@FirstName", fname);
+                if (string.IsNullOrWhiteSpace(lname))
+                {
+                    cmd.Parameters.AddWithValue("@LastName", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@LastName", lname);
+                }
 
+                if (string.IsNullOrWhiteSpace(contact))
+                {
+
+                    cmd.Parameters.AddWithValue("@Contact", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Contact", contact);
+                }
+
+
+                cmd.Parameters.AddWithValue("@Email", email);
+
+                if (gender == 0)
+                {
+                    cmd.Parameters.AddWithValue("@Gender", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Gender", gender);
+                }
+                //Alow Date of birth to be null
+
+                if (stdDob.Value.Date >= DateTime.Now.Date)
+                {
+                    cmd.Parameters.AddWithValue("@DateOfBirth", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@DateOfBirth", stdDob.Value);
+                }
+
+                cmd.Parameters.AddWithValue("@RegistrationNo", regNo);
+                cmd.Parameters.AddWithValue("@Id", id);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Successfully saved");
@@ -156,19 +212,26 @@ namespace DBMidProject
 
             else
             {
-                if (!isfname || !islname)
+                if (!isfname)
                 {
                     MessageBox.Show("Name can not have digits or symbol and it can not be empty");
                 }
-                else if (!iscontact)
+                else if (!islname && !string.IsNullOrWhiteSpace(lname))
                 {
-                    MessageBox.Show("Contact can not have alphabets or symbol and it can not be empty");
+                    MessageBox.Show("Last Name can not have digits or symbol");
                 }
-                else if (!isregNo && !isemail)
+                else if (!iscontact && !string.IsNullOrWhiteSpace(contact))
                 {
-                    MessageBox.Show("You can not leave any field empty");
+                    MessageBox.Show("Contact can not have alphabets or symbol");
                 }
-
+                else if (!isregNo)
+                {
+                    MessageBox.Show("You can not leave RegNo empty");
+                }
+                else if (!isemail)
+                {
+                    MessageBox.Show("You can not leave Email empty");
+                }
             }
 
             ShowData();

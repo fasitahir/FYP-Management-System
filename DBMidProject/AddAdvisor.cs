@@ -130,7 +130,7 @@ namespace DBMidProject
                 }
 
                 //Add Date of birth and alow null value
-                if (advDob.Value.Date >= DateTime.Now.Date)
+                if (advDob.Value.Date < DateTime.Now.Date)
                 {
                     cmd.Parameters.AddWithValue("@DateOfBirth", advDob.Value);
                 }

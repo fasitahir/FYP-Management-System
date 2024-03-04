@@ -41,12 +41,13 @@
             this.viewAdvBtn = new System.Windows.Forms.Button();
             this.manageAdvBtn = new System.Windows.Forms.Button();
             this.logo_panel = new System.Windows.Forms.Panel();
+            this.viewAdvisorUC1 = new DBMidProject.ViewAdvisorUC();
             this.addAdvisor1 = new DBMidProject.AddAdvisor();
             this.updateStdUC1 = new DBMidProject.UpdateStdUC();
             this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
             this.deleteStdUC1 = new DBMidProject.DeleteStdUC();
             this.manageStd1 = new DBMidProject.AddStd();
-            this.viewAdvisorUC1 = new DBMidProject.ViewAdvisorUC();
+            this.updateAdvUC1 = new DBMidProject.UpdateAdvUC();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
             this.advSubmenu.SuspendLayout();
@@ -151,7 +152,7 @@
             this.advSubmenu.Controls.Add(this.updateAdvBtn);
             this.advSubmenu.Controls.Add(this.addAdvBtn);
             this.advSubmenu.Controls.Add(this.viewAdvBtn);
-            this.advSubmenu.Location = new System.Drawing.Point(83, 209);
+            this.advSubmenu.Location = new System.Drawing.Point(81, 185);
             this.advSubmenu.Name = "advSubmenu";
             this.advSubmenu.Size = new System.Drawing.Size(70, 88);
             this.advSubmenu.TabIndex = 6;
@@ -167,6 +168,7 @@
             this.updateAdvBtn.TabIndex = 4;
             this.updateAdvBtn.Text = "Update";
             this.updateAdvBtn.UseVisualStyleBackColor = false;
+            this.updateAdvBtn.Click += new System.EventHandler(this.updateAdvBtn_Click);
             // 
             // addAdvBtn
             // 
@@ -199,7 +201,7 @@
             this.manageAdvBtn.BackColor = System.Drawing.Color.Linen;
             this.manageAdvBtn.FlatAppearance.BorderSize = 0;
             this.manageAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageAdvBtn.Location = new System.Drawing.Point(1, 180);
+            this.manageAdvBtn.Location = new System.Drawing.Point(3, 157);
             this.manageAdvBtn.Name = "manageAdvBtn";
             this.manageAdvBtn.Size = new System.Drawing.Size(150, 29);
             this.manageAdvBtn.TabIndex = 3;
@@ -218,6 +220,14 @@
             this.logo_panel.Size = new System.Drawing.Size(153, 100);
             this.logo_panel.TabIndex = 2;
             this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
+            // 
+            // viewAdvisorUC1
+            // 
+            this.viewAdvisorUC1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.viewAdvisorUC1.Location = new System.Drawing.Point(153, 0);
+            this.viewAdvisorUC1.Name = "viewAdvisorUC1";
+            this.viewAdvisorUC1.Size = new System.Drawing.Size(665, 450);
+            this.viewAdvisorUC1.TabIndex = 8;
             // 
             // addAdvisor1
             // 
@@ -259,13 +269,13 @@
             this.manageStd1.Size = new System.Drawing.Size(665, 447);
             this.manageStd1.TabIndex = 2;
             // 
-            // viewAdvisorUC1
+            // updateAdvUC1
             // 
-            this.viewAdvisorUC1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.viewAdvisorUC1.Location = new System.Drawing.Point(153, 0);
-            this.viewAdvisorUC1.Name = "viewAdvisorUC1";
-            this.viewAdvisorUC1.Size = new System.Drawing.Size(665, 450);
-            this.viewAdvisorUC1.TabIndex = 8;
+            this.updateAdvUC1.BackColor = System.Drawing.Color.Snow;
+            this.updateAdvUC1.Location = new System.Drawing.Point(153, 0);
+            this.updateAdvUC1.Name = "updateAdvUC1";
+            this.updateAdvUC1.Size = new System.Drawing.Size(665, 450);
+            this.updateAdvUC1.TabIndex = 9;
             // 
             // Form1
             // 
@@ -273,6 +283,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(817, 450);
+            this.Controls.Add(this.updateAdvUC1);
             this.Controls.Add(this.viewAdvisorUC1);
             this.Controls.Add(this.addAdvisor1);
             this.Controls.Add(this.updateStdUC1);
@@ -311,6 +322,7 @@
         private System.Windows.Forms.Button viewAdvBtn;
         private System.Windows.Forms.Button manageAdvBtn;
         private ViewAdvisorUC viewAdvisorUC1;
+        private UpdateAdvUC updateAdvUC1;
     }
 }
 
