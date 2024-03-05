@@ -31,6 +31,7 @@ namespace DBMidProject
             updateAdvUC1.Hide();
             projectSubmenu.Hide();
             addUpdate1.Hide();
+            viewDelProjUC1.Hide();
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)
@@ -135,8 +136,17 @@ namespace DBMidProject
 
         private void addUptBtn_Click(object sender, EventArgs e)
         {
+            hideItems();
             addUpdate1.Show();
             addUpdate1.BringToFront();
+        }
+
+        private void viewDelBtn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            viewDelProjUC1.Show();
+            viewDelProjUC1.BringToFront();
+            viewDelProjUC1.ShowCurrentData();
         }
     }
 }

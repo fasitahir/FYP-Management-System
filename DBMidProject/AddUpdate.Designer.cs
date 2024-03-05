@@ -101,7 +101,7 @@
             this.proDescription.Location = new System.Drawing.Point(303, 124);
             this.proDescription.Name = "proDescription";
             this.proDescription.Size = new System.Drawing.Size(100, 16);
-            this.proDescription.TabIndex = 72;
+            this.proDescription.TabIndex = 64;
             // 
             // label7
             // 

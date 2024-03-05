@@ -105,6 +105,12 @@
     <Compile Include="ViewAllStdUC.Designer.cs">
       <DependentUpon>ViewAllStdUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewDelProjUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="viewDelProjUC.Designer.cs">
+      <DependentUpon>viewDelProjUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAdvisor.resx">
       <DependentUpon>AddAdvisor.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllStdUC.resx">
       <DependentUpon>ViewAllStdUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewDelProjUC.resx">
+      <DependentUpon>viewDelProjUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

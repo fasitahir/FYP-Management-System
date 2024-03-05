@@ -13,6 +13,9 @@ namespace DBMidProject
         {
             InitializeComponent();
             ShowData();
+            searchBar.KeyDown += TextBox_KeyDown;
+            proDescription.KeyDown += TextBox_KeyDown;
+            proTitle.KeyDown += TextBox_KeyDown;
         }
 
         private void addProBtn_Click(object sender, EventArgs e)
@@ -106,9 +109,11 @@ namespace DBMidProject
 
                 proTitle.Text = title;
                 proDescription.Text = description;
-                
+
             }
         }
+
+
 
         private void updateProBtn_Click(object sender, EventArgs e)
         {
@@ -147,6 +152,27 @@ namespace DBMidProject
             else
             {
                 MessageBox.Show("Title can not be empty");
+            }
+        }
+
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+
+                if(sender == searchBar)
+                {
+                    searchBtn.PerformClick();
+                }
+                else
+                {
+                    // Move to the next control in the tab index order
+                    SelectNextControl((Control)sender, true, true, true, true);
+                }
+
             }
         }
     }

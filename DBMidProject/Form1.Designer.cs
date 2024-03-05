@@ -35,12 +35,17 @@
             this.addStd_btn = new System.Windows.Forms.Button();
             this.viewStd_btn = new System.Windows.Forms.Button();
             this.sidemenu_panel = new System.Windows.Forms.Panel();
+            this.projectSubmenu = new System.Windows.Forms.Panel();
+            this.viewDelBtn = new System.Windows.Forms.Button();
+            this.addUptBtn = new System.Windows.Forms.Button();
+            this.manageProjBtn = new System.Windows.Forms.Button();
+            this.manageAdvBtn = new System.Windows.Forms.Button();
+            this.logo_panel = new System.Windows.Forms.Panel();
             this.advSubmenu = new System.Windows.Forms.Panel();
             this.updateAdvBtn = new System.Windows.Forms.Button();
             this.addAdvBtn = new System.Windows.Forms.Button();
             this.viewAdvBtn = new System.Windows.Forms.Button();
-            this.manageAdvBtn = new System.Windows.Forms.Button();
-            this.logo_panel = new System.Windows.Forms.Panel();
+            this.addUpdate1 = new DBMidProject.AddUpdate();
             this.updateAdvUC1 = new DBMidProject.UpdateAdvUC();
             this.viewAdvisorUC1 = new DBMidProject.ViewAdvisorUC();
             this.addAdvisor1 = new DBMidProject.AddAdvisor();
@@ -48,15 +53,11 @@
             this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
             this.deleteStdUC1 = new DBMidProject.DeleteStdUC();
             this.manageStd1 = new DBMidProject.AddStd();
-            this.manageProjBtn = new System.Windows.Forms.Button();
-            this.projectSubmenu = new System.Windows.Forms.Panel();
-            this.viewDelBtn = new System.Windows.Forms.Button();
-            this.addUptBtn = new System.Windows.Forms.Button();
-            this.addUpdate1 = new DBMidProject.AddUpdate();
+            this.viewDelProjUC1 = new DBMidProject.viewDelProjUC();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
-            this.advSubmenu.SuspendLayout();
             this.projectSubmenu.SuspendLayout();
+            this.advSubmenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // ManageStd
@@ -154,6 +155,80 @@
             this.sidemenu_panel.TabIndex = 3;
             this.sidemenu_panel.Click += new System.EventHandler(this.sidemenu_panel_Click);
             // 
+            // projectSubmenu
+            // 
+            this.projectSubmenu.BackColor = System.Drawing.Color.Gray;
+            this.projectSubmenu.Controls.Add(this.viewDelBtn);
+            this.projectSubmenu.Controls.Add(this.addUptBtn);
+            this.projectSubmenu.Location = new System.Drawing.Point(80, 221);
+            this.projectSubmenu.Name = "projectSubmenu";
+            this.projectSubmenu.Size = new System.Drawing.Size(70, 59);
+            this.projectSubmenu.TabIndex = 7;
+            // 
+            // viewDelBtn
+            // 
+            this.viewDelBtn.BackColor = System.Drawing.Color.Linen;
+            this.viewDelBtn.FlatAppearance.BorderSize = 0;
+            this.viewDelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewDelBtn.Location = new System.Drawing.Point(0, 30);
+            this.viewDelBtn.Name = "viewDelBtn";
+            this.viewDelBtn.Size = new System.Drawing.Size(67, 23);
+            this.viewDelBtn.TabIndex = 4;
+            this.viewDelBtn.Text = "View/Del";
+            this.viewDelBtn.UseVisualStyleBackColor = false;
+            this.viewDelBtn.Click += new System.EventHandler(this.viewDelBtn_Click);
+            // 
+            // addUptBtn
+            // 
+            this.addUptBtn.BackColor = System.Drawing.Color.Linen;
+            this.addUptBtn.FlatAppearance.BorderSize = 0;
+            this.addUptBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addUptBtn.Location = new System.Drawing.Point(0, 3);
+            this.addUptBtn.Name = "addUptBtn";
+            this.addUptBtn.Size = new System.Drawing.Size(67, 21);
+            this.addUptBtn.TabIndex = 2;
+            this.addUptBtn.Text = "Add/Upd";
+            this.addUptBtn.UseVisualStyleBackColor = false;
+            this.addUptBtn.Click += new System.EventHandler(this.addUptBtn_Click);
+            // 
+            // manageProjBtn
+            // 
+            this.manageProjBtn.BackColor = System.Drawing.Color.Linen;
+            this.manageProjBtn.FlatAppearance.BorderSize = 0;
+            this.manageProjBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageProjBtn.Location = new System.Drawing.Point(1, 192);
+            this.manageProjBtn.Name = "manageProjBtn";
+            this.manageProjBtn.Size = new System.Drawing.Size(150, 29);
+            this.manageProjBtn.TabIndex = 7;
+            this.manageProjBtn.Text = "Manage Project";
+            this.manageProjBtn.UseVisualStyleBackColor = false;
+            this.manageProjBtn.Click += new System.EventHandler(this.manageProjBtn_Click);
+            // 
+            // manageAdvBtn
+            // 
+            this.manageAdvBtn.BackColor = System.Drawing.Color.Linen;
+            this.manageAdvBtn.FlatAppearance.BorderSize = 0;
+            this.manageAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageAdvBtn.Location = new System.Drawing.Point(3, 157);
+            this.manageAdvBtn.Name = "manageAdvBtn";
+            this.manageAdvBtn.Size = new System.Drawing.Size(150, 29);
+            this.manageAdvBtn.TabIndex = 3;
+            this.manageAdvBtn.Text = "Manage Advisor";
+            this.manageAdvBtn.UseVisualStyleBackColor = false;
+            this.manageAdvBtn.Click += new System.EventHandler(this.manageAdvBtn_Click);
+            // 
+            // logo_panel
+            // 
+            this.logo_panel.BackColor = System.Drawing.Color.Transparent;
+            this.logo_panel.BackgroundImage = global::DBMidProject.Properties.Resources.cs_logo;
+            this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logo_panel.Location = new System.Drawing.Point(0, 0);
+            this.logo_panel.Name = "logo_panel";
+            this.logo_panel.Size = new System.Drawing.Size(153, 100);
+            this.logo_panel.TabIndex = 2;
+            this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
+            // 
             // advSubmenu
             // 
             this.advSubmenu.BackColor = System.Drawing.Color.Gray;
@@ -204,30 +279,13 @@
             this.viewAdvBtn.UseVisualStyleBackColor = false;
             this.viewAdvBtn.Click += new System.EventHandler(this.viewAdvBtn_Click);
             // 
-            // manageAdvBtn
+            // addUpdate1
             // 
-            this.manageAdvBtn.BackColor = System.Drawing.Color.Linen;
-            this.manageAdvBtn.FlatAppearance.BorderSize = 0;
-            this.manageAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageAdvBtn.Location = new System.Drawing.Point(3, 157);
-            this.manageAdvBtn.Name = "manageAdvBtn";
-            this.manageAdvBtn.Size = new System.Drawing.Size(150, 29);
-            this.manageAdvBtn.TabIndex = 3;
-            this.manageAdvBtn.Text = "Manage Advisor";
-            this.manageAdvBtn.UseVisualStyleBackColor = false;
-            this.manageAdvBtn.Click += new System.EventHandler(this.manageAdvBtn_Click);
-            // 
-            // logo_panel
-            // 
-            this.logo_panel.BackColor = System.Drawing.Color.Transparent;
-            this.logo_panel.BackgroundImage = global::DBMidProject.Properties.Resources.cs_logo;
-            this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logo_panel.Location = new System.Drawing.Point(0, 0);
-            this.logo_panel.Name = "logo_panel";
-            this.logo_panel.Size = new System.Drawing.Size(153, 100);
-            this.logo_panel.TabIndex = 2;
-            this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
+            this.addUpdate1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(155)))));
+            this.addUpdate1.Location = new System.Drawing.Point(153, 0);
+            this.addUpdate1.Name = "addUpdate1";
+            this.addUpdate1.Size = new System.Drawing.Size(665, 450);
+            this.addUpdate1.TabIndex = 10;
             // 
             // updateAdvUC1
             // 
@@ -285,61 +343,13 @@
             this.manageStd1.Size = new System.Drawing.Size(665, 447);
             this.manageStd1.TabIndex = 2;
             // 
-            // manageProjBtn
+            // viewDelProjUC1
             // 
-            this.manageProjBtn.BackColor = System.Drawing.Color.Linen;
-            this.manageProjBtn.FlatAppearance.BorderSize = 0;
-            this.manageProjBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageProjBtn.Location = new System.Drawing.Point(1, 192);
-            this.manageProjBtn.Name = "manageProjBtn";
-            this.manageProjBtn.Size = new System.Drawing.Size(150, 29);
-            this.manageProjBtn.TabIndex = 7;
-            this.manageProjBtn.Text = "Manage Project";
-            this.manageProjBtn.UseVisualStyleBackColor = false;
-            this.manageProjBtn.Click += new System.EventHandler(this.manageProjBtn_Click);
-            // 
-            // projectSubmenu
-            // 
-            this.projectSubmenu.BackColor = System.Drawing.Color.Gray;
-            this.projectSubmenu.Controls.Add(this.viewDelBtn);
-            this.projectSubmenu.Controls.Add(this.addUptBtn);
-            this.projectSubmenu.Location = new System.Drawing.Point(80, 221);
-            this.projectSubmenu.Name = "projectSubmenu";
-            this.projectSubmenu.Size = new System.Drawing.Size(70, 59);
-            this.projectSubmenu.TabIndex = 7;
-            // 
-            // viewDelBtn
-            // 
-            this.viewDelBtn.BackColor = System.Drawing.Color.Linen;
-            this.viewDelBtn.FlatAppearance.BorderSize = 0;
-            this.viewDelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewDelBtn.Location = new System.Drawing.Point(0, 30);
-            this.viewDelBtn.Name = "viewDelBtn";
-            this.viewDelBtn.Size = new System.Drawing.Size(67, 23);
-            this.viewDelBtn.TabIndex = 4;
-            this.viewDelBtn.Text = "Update";
-            this.viewDelBtn.UseVisualStyleBackColor = false;
-            // 
-            // addUptBtn
-            // 
-            this.addUptBtn.BackColor = System.Drawing.Color.Linen;
-            this.addUptBtn.FlatAppearance.BorderSize = 0;
-            this.addUptBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addUptBtn.Location = new System.Drawing.Point(0, 3);
-            this.addUptBtn.Name = "addUptBtn";
-            this.addUptBtn.Size = new System.Drawing.Size(67, 21);
-            this.addUptBtn.TabIndex = 2;
-            this.addUptBtn.Text = "Add";
-            this.addUptBtn.UseVisualStyleBackColor = false;
-            this.addUptBtn.Click += new System.EventHandler(this.addUptBtn_Click);
-            // 
-            // addUpdate1
-            // 
-            this.addUpdate1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(155)))));
-            this.addUpdate1.Location = new System.Drawing.Point(153, 0);
-            this.addUpdate1.Name = "addUpdate1";
-            this.addUpdate1.Size = new System.Drawing.Size(665, 450);
-            this.addUpdate1.TabIndex = 10;
+            this.viewDelProjUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(200)))));
+            this.viewDelProjUC1.Location = new System.Drawing.Point(153, 0);
+            this.viewDelProjUC1.Name = "viewDelProjUC1";
+            this.viewDelProjUC1.Size = new System.Drawing.Size(665, 450);
+            this.viewDelProjUC1.TabIndex = 11;
             // 
             // Form1
             // 
@@ -347,6 +357,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(817, 450);
+            this.Controls.Add(this.viewDelProjUC1);
             this.Controls.Add(this.addUpdate1);
             this.Controls.Add(this.updateAdvUC1);
             this.Controls.Add(this.viewAdvisorUC1);
@@ -361,8 +372,8 @@
             this.Text = "Form1";
             this.stdSubMenu.ResumeLayout(false);
             this.sidemenu_panel.ResumeLayout(false);
-            this.advSubmenu.ResumeLayout(false);
             this.projectSubmenu.ResumeLayout(false);
+            this.advSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -394,6 +405,7 @@
         private System.Windows.Forms.Button viewDelBtn;
         private System.Windows.Forms.Button addUptBtn;
         private AddUpdate addUpdate1;
+        private viewDelProjUC viewDelProjUC1;
     }
 }
 
