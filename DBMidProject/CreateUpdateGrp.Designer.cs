@@ -1,0 +1,283 @@
+﻿namespace DBMidProject
+{
+    partial class CreateUpdateGrp
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.searchBar = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.studentDataView = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.grpStatus = new System.Windows.Forms.ComboBox();
+            this.assignmentDate = new System.Windows.Forms.DateTimePicker();
+            this.updateStdBtn = new System.Windows.Forms.Button();
+            this.stdRegNo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.createGrpBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataView)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.searchBtn.Location = new System.Drawing.Point(421, 56);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(50, 25);
+            this.searchBtn.TabIndex = 68;
+            this.searchBtn.Text = "Search";
+            this.searchBtn.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(230, 80);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(180, 1);
+            this.panel7.TabIndex = 67;
+            // 
+            // searchBar
+            // 
+            this.searchBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(215)))));
+            this.searchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchBar.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBar.Location = new System.Drawing.Point(230, 65);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(183, 16);
+            this.searchBar.TabIndex = 66;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(171, 65);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 20);
+            this.label9.TabIndex = 65;
+            this.label9.Text = "Search";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.studentDataView);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 303);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(665, 147);
+            this.panel6.TabIndex = 63;
+            // 
+            // studentDataView
+            // 
+            this.studentDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentDataView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.studentDataView.Location = new System.Drawing.Point(0, 3);
+            this.studentDataView.Name = "studentDataView";
+            this.studentDataView.Size = new System.Drawing.Size(665, 144);
+            this.studentDataView.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(194, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(252, 32);
+            this.label8.TabIndex = 62;
+            this.label8.Text = "Create/Update Groups";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Location = new System.Drawing.Point(184, 144);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(101, 1);
+            this.panel5.TabIndex = 61;
+            // 
+            // grpStatus
+            // 
+            this.grpStatus.FormattingEnabled = true;
+            this.grpStatus.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.grpStatus.Location = new System.Drawing.Point(477, 127);
+            this.grpStatus.Name = "grpStatus";
+            this.grpStatus.Size = new System.Drawing.Size(121, 21);
+            this.grpStatus.TabIndex = 48;
+            // 
+            // assignmentDate
+            // 
+            this.assignmentDate.Location = new System.Drawing.Point(281, 185);
+            this.assignmentDate.Name = "assignmentDate";
+            this.assignmentDate.Size = new System.Drawing.Size(200, 20);
+            this.assignmentDate.TabIndex = 47;
+            // 
+            // updateStdBtn
+            // 
+            this.updateStdBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.updateStdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.updateStdBtn.Location = new System.Drawing.Point(466, 249);
+            this.updateStdBtn.Name = "updateStdBtn";
+            this.updateStdBtn.Size = new System.Drawing.Size(100, 23);
+            this.updateStdBtn.TabIndex = 56;
+            this.updateStdBtn.Text = "Update Group";
+            this.updateStdBtn.UseVisualStyleBackColor = false;
+            // 
+            // stdRegNo
+            // 
+            this.stdRegNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(215)))));
+            this.stdRegNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stdRegNo.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stdRegNo.Location = new System.Drawing.Point(184, 129);
+            this.stdRegNo.Name = "stdRegNo";
+            this.stdRegNo.Size = new System.Drawing.Size(100, 16);
+            this.stdRegNo.TabIndex = 46;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(32, 127);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(130, 17);
+            this.label7.TabIndex = 55;
+            this.label7.Text = "Registration Number";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(169, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 17);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Assignment Date";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(418, 129);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 17);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Status";
+            // 
+            // createGrpBtn
+            // 
+            this.createGrpBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.createGrpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.createGrpBtn.Location = new System.Drawing.Point(130, 249);
+            this.createGrpBtn.Name = "createGrpBtn";
+            this.createGrpBtn.Size = new System.Drawing.Size(100, 23);
+            this.createGrpBtn.TabIndex = 69;
+            this.createGrpBtn.Text = "Create Group";
+            this.createGrpBtn.UseVisualStyleBackColor = false;
+            this.createGrpBtn.Click += new System.EventHandler(this.createGrpBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(65, 148);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(348, 15);
+            this.label1.TabIndex = 70;
+            this.label1.Text = "For adding students put their regNo in comma separated pattern";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.Location = new System.Drawing.Point(169, 285);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(365, 15);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "NOTE: Minum students in a group can be 3 and maximum can be 5";
+            // 
+            // CreateUpdateGrp
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(215)))));
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.createGrpBtn);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.searchBar);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.grpStatus);
+            this.Controls.Add(this.assignmentDate);
+            this.Controls.Add(this.updateStdBtn);
+            this.Controls.Add(this.stdRegNo);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Name = "CreateUpdateGrp";
+            this.Size = new System.Drawing.Size(665, 450);
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataView)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox searchBar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView studentDataView;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ComboBox grpStatus;
+        private System.Windows.Forms.DateTimePicker assignmentDate;
+        private System.Windows.Forms.Button updateStdBtn;
+        private System.Windows.Forms.TextBox stdRegNo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button createGrpBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+    }
+}

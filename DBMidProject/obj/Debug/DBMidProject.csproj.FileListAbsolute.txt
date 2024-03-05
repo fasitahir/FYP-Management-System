@@ -28,3 +28,4 @@ D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidPr
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.UpdateAdvUC.resources
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.AddUpdate.resources
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.viewDelProjUC.resources
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.CreateUpdateGrp.resources

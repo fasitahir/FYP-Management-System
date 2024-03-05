@@ -32,6 +32,7 @@ namespace DBMidProject
             projectSubmenu.Hide();
             addUpdate1.Hide();
             viewDelProjUC1.Hide();
+            createUpdateGrp1.Hide();
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)
@@ -147,6 +148,12 @@ namespace DBMidProject
             viewDelProjUC1.Show();
             viewDelProjUC1.BringToFront();
             viewDelProjUC1.ShowCurrentData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            createUpdateGrp1.Show();
+            createUpdateGrp1.BringToFront();
         }
     }
 }

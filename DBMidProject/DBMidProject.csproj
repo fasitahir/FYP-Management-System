@@ -60,6 +60,12 @@
       <DependentUpon>AddUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuration.cs" />
+    <Compile Include="CreateUpdateGrp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateUpdateGrp.Designer.cs">
+      <DependentUpon>CreateUpdateGrp.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteStdUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddUpdate.resx">
       <DependentUpon>AddUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUpdateGrp.resx">
+      <DependentUpon>CreateUpdateGrp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteStdUC.resx">
       <DependentUpon>DeleteStdUC.cs</DependentUpon>
