@@ -53,6 +53,12 @@
     <Compile Include="AddAdvisor.Designer.cs">
       <DependentUpon>AddAdvisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddUpdate.Designer.cs">
+      <DependentUpon>AddUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuration.cs" />
     <Compile Include="DeleteStdUC.cs">
       <SubType>UserControl</SubType>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="AddAdvisor.resx">
       <DependentUpon>AddAdvisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUpdate.resx">
+      <DependentUpon>AddUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteStdUC.resx">
       <DependentUpon>DeleteStdUC.cs</DependentUpon>

@@ -41,16 +41,22 @@
             this.viewAdvBtn = new System.Windows.Forms.Button();
             this.manageAdvBtn = new System.Windows.Forms.Button();
             this.logo_panel = new System.Windows.Forms.Panel();
+            this.updateAdvUC1 = new DBMidProject.UpdateAdvUC();
             this.viewAdvisorUC1 = new DBMidProject.ViewAdvisorUC();
             this.addAdvisor1 = new DBMidProject.AddAdvisor();
             this.updateStdUC1 = new DBMidProject.UpdateStdUC();
             this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
             this.deleteStdUC1 = new DBMidProject.DeleteStdUC();
             this.manageStd1 = new DBMidProject.AddStd();
-            this.updateAdvUC1 = new DBMidProject.UpdateAdvUC();
+            this.manageProjBtn = new System.Windows.Forms.Button();
+            this.projectSubmenu = new System.Windows.Forms.Panel();
+            this.viewDelBtn = new System.Windows.Forms.Button();
+            this.addUptBtn = new System.Windows.Forms.Button();
+            this.addUpdate1 = new DBMidProject.AddUpdate();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
             this.advSubmenu.SuspendLayout();
+            this.projectSubmenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // ManageStd
@@ -134,11 +140,13 @@
             // 
             // sidemenu_panel
             // 
-            this.sidemenu_panel.Controls.Add(this.advSubmenu);
+            this.sidemenu_panel.Controls.Add(this.projectSubmenu);
+            this.sidemenu_panel.Controls.Add(this.manageProjBtn);
             this.sidemenu_panel.Controls.Add(this.manageAdvBtn);
             this.sidemenu_panel.Controls.Add(this.logo_panel);
             this.sidemenu_panel.Controls.Add(this.ManageStd);
             this.sidemenu_panel.Controls.Add(this.stdSubMenu);
+            this.sidemenu_panel.Controls.Add(this.advSubmenu);
             this.sidemenu_panel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenu_panel.Location = new System.Drawing.Point(0, 0);
             this.sidemenu_panel.Name = "sidemenu_panel";
@@ -152,7 +160,7 @@
             this.advSubmenu.Controls.Add(this.updateAdvBtn);
             this.advSubmenu.Controls.Add(this.addAdvBtn);
             this.advSubmenu.Controls.Add(this.viewAdvBtn);
-            this.advSubmenu.Location = new System.Drawing.Point(81, 185);
+            this.advSubmenu.Location = new System.Drawing.Point(80, 186);
             this.advSubmenu.Name = "advSubmenu";
             this.advSubmenu.Size = new System.Drawing.Size(70, 88);
             this.advSubmenu.TabIndex = 6;
@@ -221,6 +229,14 @@
             this.logo_panel.TabIndex = 2;
             this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
             // 
+            // updateAdvUC1
+            // 
+            this.updateAdvUC1.BackColor = System.Drawing.Color.Snow;
+            this.updateAdvUC1.Location = new System.Drawing.Point(153, 0);
+            this.updateAdvUC1.Name = "updateAdvUC1";
+            this.updateAdvUC1.Size = new System.Drawing.Size(665, 450);
+            this.updateAdvUC1.TabIndex = 9;
+            // 
             // viewAdvisorUC1
             // 
             this.viewAdvisorUC1.BackColor = System.Drawing.Color.PapayaWhip;
@@ -269,13 +285,61 @@
             this.manageStd1.Size = new System.Drawing.Size(665, 447);
             this.manageStd1.TabIndex = 2;
             // 
-            // updateAdvUC1
+            // manageProjBtn
             // 
-            this.updateAdvUC1.BackColor = System.Drawing.Color.Snow;
-            this.updateAdvUC1.Location = new System.Drawing.Point(153, 0);
-            this.updateAdvUC1.Name = "updateAdvUC1";
-            this.updateAdvUC1.Size = new System.Drawing.Size(665, 450);
-            this.updateAdvUC1.TabIndex = 9;
+            this.manageProjBtn.BackColor = System.Drawing.Color.Linen;
+            this.manageProjBtn.FlatAppearance.BorderSize = 0;
+            this.manageProjBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageProjBtn.Location = new System.Drawing.Point(1, 192);
+            this.manageProjBtn.Name = "manageProjBtn";
+            this.manageProjBtn.Size = new System.Drawing.Size(150, 29);
+            this.manageProjBtn.TabIndex = 7;
+            this.manageProjBtn.Text = "Manage Project";
+            this.manageProjBtn.UseVisualStyleBackColor = false;
+            this.manageProjBtn.Click += new System.EventHandler(this.manageProjBtn_Click);
+            // 
+            // projectSubmenu
+            // 
+            this.projectSubmenu.BackColor = System.Drawing.Color.Gray;
+            this.projectSubmenu.Controls.Add(this.viewDelBtn);
+            this.projectSubmenu.Controls.Add(this.addUptBtn);
+            this.projectSubmenu.Location = new System.Drawing.Point(80, 221);
+            this.projectSubmenu.Name = "projectSubmenu";
+            this.projectSubmenu.Size = new System.Drawing.Size(70, 59);
+            this.projectSubmenu.TabIndex = 7;
+            // 
+            // viewDelBtn
+            // 
+            this.viewDelBtn.BackColor = System.Drawing.Color.Linen;
+            this.viewDelBtn.FlatAppearance.BorderSize = 0;
+            this.viewDelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewDelBtn.Location = new System.Drawing.Point(0, 30);
+            this.viewDelBtn.Name = "viewDelBtn";
+            this.viewDelBtn.Size = new System.Drawing.Size(67, 23);
+            this.viewDelBtn.TabIndex = 4;
+            this.viewDelBtn.Text = "Update";
+            this.viewDelBtn.UseVisualStyleBackColor = false;
+            // 
+            // addUptBtn
+            // 
+            this.addUptBtn.BackColor = System.Drawing.Color.Linen;
+            this.addUptBtn.FlatAppearance.BorderSize = 0;
+            this.addUptBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addUptBtn.Location = new System.Drawing.Point(0, 3);
+            this.addUptBtn.Name = "addUptBtn";
+            this.addUptBtn.Size = new System.Drawing.Size(67, 21);
+            this.addUptBtn.TabIndex = 2;
+            this.addUptBtn.Text = "Add";
+            this.addUptBtn.UseVisualStyleBackColor = false;
+            this.addUptBtn.Click += new System.EventHandler(this.addUptBtn_Click);
+            // 
+            // addUpdate1
+            // 
+            this.addUpdate1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(155)))));
+            this.addUpdate1.Location = new System.Drawing.Point(153, 0);
+            this.addUpdate1.Name = "addUpdate1";
+            this.addUpdate1.Size = new System.Drawing.Size(665, 450);
+            this.addUpdate1.TabIndex = 10;
             // 
             // Form1
             // 
@@ -283,6 +347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(817, 450);
+            this.Controls.Add(this.addUpdate1);
             this.Controls.Add(this.updateAdvUC1);
             this.Controls.Add(this.viewAdvisorUC1);
             this.Controls.Add(this.addAdvisor1);
@@ -297,6 +362,7 @@
             this.stdSubMenu.ResumeLayout(false);
             this.sidemenu_panel.ResumeLayout(false);
             this.advSubmenu.ResumeLayout(false);
+            this.projectSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -323,6 +389,11 @@
         private System.Windows.Forms.Button manageAdvBtn;
         private ViewAdvisorUC viewAdvisorUC1;
         private UpdateAdvUC updateAdvUC1;
+        private System.Windows.Forms.Button manageProjBtn;
+        private System.Windows.Forms.Panel projectSubmenu;
+        private System.Windows.Forms.Button viewDelBtn;
+        private System.Windows.Forms.Button addUptBtn;
+        private AddUpdate addUpdate1;
     }
 }
 

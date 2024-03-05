@@ -18,32 +18,6 @@ namespace DBMidProject
             hideItems();
         }
 
-        private void ManageStd_Click(object sender, EventArgs e)
-        {
-            advSubmenu.Hide();
-            stdSubMenu.Show();
-            stdSubMenu.BringToFront();
-        }
-
-        private void addStd_btn_Click(object sender, EventArgs e)
-        {
-            hideItems();
-            manageStd1.Show();
-            manageStd1.BringToFront();
-        }
-
-        private void sidemenu_panel_Click(object sender, EventArgs e)
-        {
-            stdSubMenu.Hide();
-            advSubmenu.Hide();
-        }
-
-
-        private void logo_panel_Click(object sender, EventArgs e)
-        {
-            hideItems();
-        }
-
         private void hideItems()
         {
             stdSubMenu.Hide();
@@ -55,7 +29,38 @@ namespace DBMidProject
             addAdvisor1.Hide();
             viewAdvisorUC1.Hide();
             updateAdvUC1.Hide();
+            projectSubmenu.Hide();
+            addUpdate1.Hide();
         }
+        
+        private void sidemenu_panel_Click(object sender, EventArgs e)
+        {
+            stdSubMenu.Hide();
+            advSubmenu.Hide();
+            projectSubmenu.Hide();
+        }
+
+        private void ManageStd_Click(object sender, EventArgs e)
+        {
+            advSubmenu.Hide();
+            projectSubmenu.Hide();
+            stdSubMenu.Show();
+            stdSubMenu.BringToFront();
+        }
+
+        private void addStd_btn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            manageStd1.Show();
+            manageStd1.BringToFront();
+        }
+
+        private void logo_panel_Click(object sender, EventArgs e)
+        {
+            hideItems();
+        }
+
+        
 
         private void ManageStd_MouseEnter(object sender, EventArgs e)
         {
@@ -101,6 +106,7 @@ namespace DBMidProject
         {
             stdSubMenu.Hide();
             advSubmenu.Show();
+            advSubmenu.BringToFront();
         }
 
         private void viewAdvBtn_Click(object sender, EventArgs e)
@@ -113,9 +119,24 @@ namespace DBMidProject
 
         private void updateAdvBtn_Click(object sender, EventArgs e)
         {
+            advSubmenu.Hide();
             updateAdvUC1.Show();
             updateAdvUC1.BringToFront();
             updateAdvUC1.ShowData();
+        }
+
+        private void manageProjBtn_Click(object sender, EventArgs e)
+        {
+            advSubmenu.Hide();
+            stdSubMenu.Hide();
+            projectSubmenu.Show();
+            projectSubmenu.BringToFront();
+        }
+
+        private void addUptBtn_Click(object sender, EventArgs e)
+        {
+            addUpdate1.Show();
+            addUpdate1.BringToFront();
         }
     }
 }

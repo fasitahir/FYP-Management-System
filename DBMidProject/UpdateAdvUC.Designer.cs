@@ -41,7 +41,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.advGender = new System.Windows.Forms.ComboBox();
             this.advDob = new System.Windows.Forms.DateTimePicker();
-            this.updateAdvBtn = new System.Windows.Forms.Button();
             this.advContact = new System.Windows.Forms.TextBox();
             this.advEmail = new System.Windows.Forms.TextBox();
             this.advLastName = new System.Windows.Forms.TextBox();
@@ -57,6 +56,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.designationAdv = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.updateAdvBtn = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advisorDataView)).BeginInit();
             this.SuspendLayout();
@@ -179,18 +179,6 @@
             this.advDob.Name = "advDob";
             this.advDob.Size = new System.Drawing.Size(186, 20);
             this.advDob.TabIndex = 8;
-            // 
-            // updateAdvBtn
-            // 
-            this.updateAdvBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.updateAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.updateAdvBtn.Location = new System.Drawing.Point(298, 273);
-            this.updateAdvBtn.Name = "updateAdvBtn";
-            this.updateAdvBtn.Size = new System.Drawing.Size(100, 23);
-            this.updateAdvBtn.TabIndex = 56;
-            this.updateAdvBtn.Text = "Update Advisor";
-            this.updateAdvBtn.UseVisualStyleBackColor = false;
-            this.updateAdvBtn.Click += new System.EventHandler(this.updateAdvBtn_Click);
             // 
             // advContact
             // 
@@ -344,6 +332,18 @@
             this.label10.TabIndex = 70;
             this.label10.Text = "Designation";
             // 
+            // updateAdvBtn
+            // 
+            this.updateAdvBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.updateAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.updateAdvBtn.Location = new System.Drawing.Point(298, 273);
+            this.updateAdvBtn.Name = "updateAdvBtn";
+            this.updateAdvBtn.Size = new System.Drawing.Size(100, 23);
+            this.updateAdvBtn.TabIndex = 56;
+            this.updateAdvBtn.Text = "Update Advisor";
+            this.updateAdvBtn.UseVisualStyleBackColor = false;
+            this.updateAdvBtn.Click += new System.EventHandler(this.updateAdvBtn_Click);
+            // 
             // UpdateAdvUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,7 +401,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox advGender;
         private System.Windows.Forms.DateTimePicker advDob;
-        private System.Windows.Forms.Button updateAdvBtn;
         private System.Windows.Forms.TextBox advContact;
         private System.Windows.Forms.TextBox advEmail;
         private System.Windows.Forms.TextBox advLastName;
@@ -417,5 +416,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ComboBox designationAdv;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button updateAdvBtn;
     }
 }
