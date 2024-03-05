@@ -116,6 +116,7 @@
             this.advisorDataView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.advisorDataView.Location = new System.Drawing.Point(0, 0);
             this.advisorDataView.Name = "advisorDataView";
+            this.advisorDataView.ReadOnly = true;
             this.advisorDataView.Size = new System.Drawing.Size(665, 136);
             this.advisorDataView.TabIndex = 0;
             this.advisorDataView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.advisorDataView_CellClick);
