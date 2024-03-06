@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBMidProject
 {
@@ -293,6 +294,47 @@ namespace DBMidProject
             cmd.ExecuteNonQuery();
             ShowData();
 
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int searchStatus = 0;
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("SELECT GroupId, StudentId, RegistrationNo, L.Value AS Status, AssignmentDate, Created_On " +
+                    "FROM GroupStudent " +
+                    "JOIN Student S ON S.Id = StudentId " +
+                    "JOIN [Group] G ON G.Id = GroupId " +
+                    "JOIN Lookup L ON L.Id = Status " +
+                    "WHERE Status LIKE @searchStatus OR GroupId LIKE @searchText OR " +
+                    "StudentId LIKE @searchText OR RegistrationNo LIKE @searchText " +
+                    "OR AssignmentDate LIKE @searchText OR Created_ON LIKE @searchText", con);
+                string searchText = searchBar.Text.ToString();
+
+                if (searchText.ToLower() == "active")
+                {
+                    searchStatus = 3;
+                }
+                else if (searchText.ToLower() == "inactive")
+                {
+                    searchStatus = 4;
+                }
+
+                cmd.Parameters.AddWithValue("@searchText", searchText);
+                cmd.Parameters.AddWithValue("@searchStatus", searchStatus);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                grpDataView.DataSource = dt;
+                sizeset();
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex + "");
+            }
+            
         }
     }
 }

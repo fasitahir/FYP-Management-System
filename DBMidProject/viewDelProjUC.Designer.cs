@@ -56,10 +56,10 @@
             // 
             this.projectDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.projectDataView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.projectDataView.Location = new System.Drawing.Point(0, -17);
+            this.projectDataView.Location = new System.Drawing.Point(0, 3);
             this.projectDataView.Name = "projectDataView";
             this.projectDataView.ReadOnly = true;
-            this.projectDataView.Size = new System.Drawing.Size(665, 216);
+            this.projectDataView.Size = new System.Drawing.Size(665, 196);
             this.projectDataView.TabIndex = 0;
             this.projectDataView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectDataView_CellClick);
             // 

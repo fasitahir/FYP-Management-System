@@ -34,6 +34,7 @@ namespace DBMidProject
             viewDelProjUC1.Hide();
             createUpdateGrp1.Hide();
             groupSidemenu.Hide();
+            viewDelGrp1.Hide();
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)
@@ -167,9 +168,18 @@ namespace DBMidProject
 
         private void addUptGrp_Click(object sender, EventArgs e)
         {
+            hideItems();
+            createUpdateGrp1.ShowData();
             createUpdateGrp1.Show();
             createUpdateGrp1.BringToFront();
         }
 
+        private void viewDelGrp_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            viewDelGrp1.viewCurrentData();
+            viewDelGrp1.Show();
+            viewDelGrp1.BringToFront();
+        }
     }
 }
