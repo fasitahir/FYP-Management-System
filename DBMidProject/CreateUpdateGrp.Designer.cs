@@ -33,7 +33,7 @@
             this.searchBar = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.studentDataView = new System.Windows.Forms.DataGridView();
+            this.grpDataView = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.grpStatus = new System.Windows.Forms.ComboBox();
@@ -47,7 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpDataView)).BeginInit();
             this.SuspendLayout();
             // 
             // searchBtn
@@ -91,21 +91,22 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.studentDataView);
+            this.panel6.Controls.Add(this.grpDataView);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 303);
+            this.panel6.Location = new System.Drawing.Point(0, 293);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(665, 147);
+            this.panel6.Size = new System.Drawing.Size(665, 157);
             this.panel6.TabIndex = 63;
             // 
-            // studentDataView
+            // grpDataView
             // 
-            this.studentDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.studentDataView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.studentDataView.Location = new System.Drawing.Point(0, 3);
-            this.studentDataView.Name = "studentDataView";
-            this.studentDataView.Size = new System.Drawing.Size(665, 144);
-            this.studentDataView.TabIndex = 0;
+            this.grpDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpDataView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.grpDataView.Location = new System.Drawing.Point(0, 3);
+            this.grpDataView.Name = "grpDataView";
+            this.grpDataView.Size = new System.Drawing.Size(665, 154);
+            this.grpDataView.TabIndex = 0;
+            this.grpDataView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpDataView_CellClick);
             // 
             // label8
             // 
@@ -147,12 +148,13 @@
             // 
             this.updateStdBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.updateStdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.updateStdBtn.Location = new System.Drawing.Point(466, 249);
+            this.updateStdBtn.Location = new System.Drawing.Point(477, 235);
             this.updateStdBtn.Name = "updateStdBtn";
             this.updateStdBtn.Size = new System.Drawing.Size(100, 23);
             this.updateStdBtn.TabIndex = 56;
             this.updateStdBtn.Text = "Update Group";
             this.updateStdBtn.UseVisualStyleBackColor = false;
+            this.updateStdBtn.Click += new System.EventHandler(this.updateStdBtn_Click);
             // 
             // stdRegNo
             // 
@@ -198,7 +200,7 @@
             // 
             this.createGrpBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.createGrpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.createGrpBtn.Location = new System.Drawing.Point(130, 249);
+            this.createGrpBtn.Location = new System.Drawing.Point(136, 235);
             this.createGrpBtn.Name = "createGrpBtn";
             this.createGrpBtn.Size = new System.Drawing.Size(100, 23);
             this.createGrpBtn.TabIndex = 69;
@@ -222,11 +224,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(169, 285);
+            this.label2.Location = new System.Drawing.Point(172, 275);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(365, 15);
+            this.label2.Size = new System.Drawing.Size(379, 15);
             this.label2.TabIndex = 71;
-            this.label2.Text = "NOTE: Minum students in a group can be 3 and maximum can be 5";
+            this.label2.Text = "NOTE: Minimum students in a group can be 3 and maximum can be 5";
             // 
             // CreateUpdateGrp
             // 
@@ -253,7 +255,7 @@
             this.Name = "CreateUpdateGrp";
             this.Size = new System.Drawing.Size(665, 450);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpDataView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +268,7 @@
         private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView studentDataView;
+        private System.Windows.Forms.DataGridView grpDataView;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ComboBox grpStatus;

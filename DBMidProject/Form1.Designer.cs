@@ -35,6 +35,10 @@
             this.addStd_btn = new System.Windows.Forms.Button();
             this.viewStd_btn = new System.Windows.Forms.Button();
             this.sidemenu_panel = new System.Windows.Forms.Panel();
+            this.groupSidemenu = new System.Windows.Forms.Panel();
+            this.viewDelGrp = new System.Windows.Forms.Button();
+            this.addUptGrp = new System.Windows.Forms.Button();
+            this.manageGrp = new System.Windows.Forms.Button();
             this.projectSubmenu = new System.Windows.Forms.Panel();
             this.viewDelBtn = new System.Windows.Forms.Button();
             this.addUptBtn = new System.Windows.Forms.Button();
@@ -45,7 +49,6 @@
             this.updateAdvBtn = new System.Windows.Forms.Button();
             this.addAdvBtn = new System.Windows.Forms.Button();
             this.viewAdvBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.viewDelProjUC1 = new DBMidProject.viewDelProjUC();
             this.addUpdate1 = new DBMidProject.AddUpdate();
             this.updateAdvUC1 = new DBMidProject.UpdateAdvUC();
@@ -58,6 +61,7 @@
             this.createUpdateGrp1 = new DBMidProject.CreateUpdateGrp();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
+            this.groupSidemenu.SuspendLayout();
             this.projectSubmenu.SuspendLayout();
             this.advSubmenu.SuspendLayout();
             this.SuspendLayout();
@@ -143,7 +147,8 @@
             // 
             // sidemenu_panel
             // 
-            this.sidemenu_panel.Controls.Add(this.button1);
+            this.sidemenu_panel.Controls.Add(this.groupSidemenu);
+            this.sidemenu_panel.Controls.Add(this.manageGrp);
             this.sidemenu_panel.Controls.Add(this.projectSubmenu);
             this.sidemenu_panel.Controls.Add(this.manageProjBtn);
             this.sidemenu_panel.Controls.Add(this.manageAdvBtn);
@@ -157,6 +162,54 @@
             this.sidemenu_panel.Size = new System.Drawing.Size(153, 450);
             this.sidemenu_panel.TabIndex = 3;
             this.sidemenu_panel.Click += new System.EventHandler(this.sidemenu_panel_Click);
+            // 
+            // groupSidemenu
+            // 
+            this.groupSidemenu.BackColor = System.Drawing.Color.Gray;
+            this.groupSidemenu.Controls.Add(this.viewDelGrp);
+            this.groupSidemenu.Controls.Add(this.addUptGrp);
+            this.groupSidemenu.Location = new System.Drawing.Point(80, 258);
+            this.groupSidemenu.Name = "groupSidemenu";
+            this.groupSidemenu.Size = new System.Drawing.Size(70, 59);
+            this.groupSidemenu.TabIndex = 8;
+            // 
+            // viewDelGrp
+            // 
+            this.viewDelGrp.BackColor = System.Drawing.Color.Linen;
+            this.viewDelGrp.FlatAppearance.BorderSize = 0;
+            this.viewDelGrp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewDelGrp.Location = new System.Drawing.Point(0, 30);
+            this.viewDelGrp.Name = "viewDelGrp";
+            this.viewDelGrp.Size = new System.Drawing.Size(67, 23);
+            this.viewDelGrp.TabIndex = 4;
+            this.viewDelGrp.Text = "View/Del";
+            this.viewDelGrp.UseVisualStyleBackColor = false;
+            // 
+            // addUptGrp
+            // 
+            this.addUptGrp.BackColor = System.Drawing.Color.Linen;
+            this.addUptGrp.FlatAppearance.BorderSize = 0;
+            this.addUptGrp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addUptGrp.Location = new System.Drawing.Point(0, 3);
+            this.addUptGrp.Name = "addUptGrp";
+            this.addUptGrp.Size = new System.Drawing.Size(67, 21);
+            this.addUptGrp.TabIndex = 2;
+            this.addUptGrp.Text = "Add/Upd";
+            this.addUptGrp.UseVisualStyleBackColor = false;
+            this.addUptGrp.Click += new System.EventHandler(this.addUptGrp_Click);
+            // 
+            // manageGrp
+            // 
+            this.manageGrp.BackColor = System.Drawing.Color.Linen;
+            this.manageGrp.FlatAppearance.BorderSize = 0;
+            this.manageGrp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageGrp.Location = new System.Drawing.Point(1, 227);
+            this.manageGrp.Name = "manageGrp";
+            this.manageGrp.Size = new System.Drawing.Size(150, 29);
+            this.manageGrp.TabIndex = 8;
+            this.manageGrp.Text = "Manage Groups";
+            this.manageGrp.UseVisualStyleBackColor = false;
+            this.manageGrp.Click += new System.EventHandler(this.manageGrp_Click_1);
             // 
             // projectSubmenu
             // 
@@ -282,19 +335,6 @@
             this.viewAdvBtn.UseVisualStyleBackColor = false;
             this.viewAdvBtn.Click += new System.EventHandler(this.viewAdvBtn_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Linen;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 29);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Manage Groups";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // viewDelProjUC1
             // 
             this.viewDelProjUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(200)))));
@@ -397,6 +437,7 @@
             this.Text = "Form1";
             this.stdSubMenu.ResumeLayout(false);
             this.sidemenu_panel.ResumeLayout(false);
+            this.groupSidemenu.ResumeLayout(false);
             this.projectSubmenu.ResumeLayout(false);
             this.advSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -431,8 +472,11 @@
         private System.Windows.Forms.Button addUptBtn;
         private AddUpdate addUpdate1;
         private viewDelProjUC viewDelProjUC1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button manageGrp;
         private CreateUpdateGrp createUpdateGrp1;
+        private System.Windows.Forms.Panel groupSidemenu;
+        private System.Windows.Forms.Button viewDelGrp;
+        private System.Windows.Forms.Button addUptGrp;
     }
 }
 

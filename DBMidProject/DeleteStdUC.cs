@@ -25,7 +25,12 @@ namespace DBMidProject
             var con = Configuration.getInstance().getConnection();
             SqlCommand delete_cmd = new SqlCommand("UPDATE Student " +
                 "SET RegistrationNo = @RegNoNew " +
-                "WHERE RegistrationNo = @RegNoPre", con);
+                "WHERE RegistrationNo = @RegNoPre; " +
+                "UPDATE GroupStudent " +
+                "SET Status = 4 " +
+                "FROM GroupStudent GS " +
+                "JOIN Student S ON S.Id = StudentId " +
+                "WHERE RegistrationNo LIKE '%*' ", con);
 
             string regNo = stdRegNo.Text;
             delete_cmd.Parameters.AddWithValue("@RegNoPre", regNo);

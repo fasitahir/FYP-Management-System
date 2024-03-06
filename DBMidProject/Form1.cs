@@ -33,6 +33,7 @@ namespace DBMidProject
             addUpdate1.Hide();
             viewDelProjUC1.Hide();
             createUpdateGrp1.Hide();
+            groupSidemenu.Hide();
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)
@@ -40,6 +41,8 @@ namespace DBMidProject
             stdSubMenu.Hide();
             advSubmenu.Hide();
             projectSubmenu.Hide();
+            groupSidemenu.Hide();
+
         }
 
         private void ManageStd_Click(object sender, EventArgs e)
@@ -107,6 +110,8 @@ namespace DBMidProject
         private void manageAdvBtn_Click(object sender, EventArgs e)
         {
             stdSubMenu.Hide();
+            groupSidemenu.Hide();
+            projectSubmenu.Hide();
             advSubmenu.Show();
             advSubmenu.BringToFront();
         }
@@ -131,6 +136,7 @@ namespace DBMidProject
         {
             advSubmenu.Hide();
             stdSubMenu.Hide();
+            groupSidemenu.Hide();
             projectSubmenu.Show();
             projectSubmenu.BringToFront();
         }
@@ -150,10 +156,20 @@ namespace DBMidProject
             viewDelProjUC1.ShowCurrentData();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void manageGrp_Click_1(object sender, EventArgs e)
+        {
+            advSubmenu.Hide();
+            stdSubMenu.Hide();
+            projectSubmenu.Hide();
+            groupSidemenu.Show();
+            groupSidemenu.BringToFront();
+        }
+
+        private void addUptGrp_Click(object sender, EventArgs e)
         {
             createUpdateGrp1.Show();
             createUpdateGrp1.BringToFront();
         }
+
     }
 }
