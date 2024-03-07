@@ -36,6 +36,7 @@ namespace DBMidProject
             groupSidemenu.Hide();
             viewDelGrp1.Hide();
             assignProjectUC1.Hide();
+            assignAdvisorsUC1.Hide();
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)
@@ -194,6 +195,14 @@ namespace DBMidProject
             assignProjectUC1.ShowAssignedProjects();
 
             assignProjectUC1.loadComboBox();
+        }
+
+        private void assignAdvisorBtn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            assignAdvisorsUC1.Show();
+            assignAdvisorsUC1.BringToFront();
+            assignAdvisorsUC1.showAssignedData();
         }
     }
 }

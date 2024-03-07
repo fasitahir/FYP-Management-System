@@ -59,6 +59,12 @@
     <Compile Include="AddUpdate.Designer.cs">
       <DependentUpon>AddUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="assignAdvisorsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="assignAdvisorsUC.Designer.cs">
+      <DependentUpon>assignAdvisorsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="assignProjectUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddUpdate.resx">
       <DependentUpon>AddUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assignAdvisorsUC.resx">
+      <DependentUpon>assignAdvisorsUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="assignProjectUC.resx">
       <DependentUpon>assignProjectUC.cs</DependentUpon>
