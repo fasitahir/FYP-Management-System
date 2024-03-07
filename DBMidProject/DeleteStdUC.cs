@@ -41,7 +41,7 @@ namespace DBMidProject
         }
 
 
-        private void showData()
+        public void showData()
         {
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand("Select S.Id, RegistrationNo, FirstName, LastName, Contact, Email, DateOfBirth, Gender " +

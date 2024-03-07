@@ -35,6 +35,7 @@ namespace DBMidProject
             createUpdateGrp1.Hide();
             groupSidemenu.Hide();
             viewDelGrp1.Hide();
+            assignProjectUC1.Hide();
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)
@@ -51,6 +52,7 @@ namespace DBMidProject
             advSubmenu.Hide();
             projectSubmenu.Hide();
             stdSubMenu.Show();
+            groupSidemenu.Hide();
             stdSubMenu.BringToFront();
         }
 
@@ -83,6 +85,7 @@ namespace DBMidProject
             hideItems();
             deleteStdUC1.Show();
             deleteStdUC1.BringToFront();
+            deleteStdUC1.showData();
         }
 
         private void viewStd_btn_Click(object sender, EventArgs e)
@@ -180,6 +183,17 @@ namespace DBMidProject
             viewDelGrp1.viewCurrentData();
             viewDelGrp1.Show();
             viewDelGrp1.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            assignProjectUC1.Show();
+            assignProjectUC1.BringToFront();
+            assignProjectUC1.ShowProjectData();
+            assignProjectUC1.ShowAssignedProjects();
+
+            assignProjectUC1.loadComboBox();
         }
     }
 }

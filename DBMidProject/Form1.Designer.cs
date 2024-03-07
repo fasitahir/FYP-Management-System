@@ -49,6 +49,7 @@
             this.updateAdvBtn = new System.Windows.Forms.Button();
             this.addAdvBtn = new System.Windows.Forms.Button();
             this.viewAdvBtn = new System.Windows.Forms.Button();
+            this.viewDelGrp1 = new DBMidProject.viewDelGrp();
             this.createUpdateGrp1 = new DBMidProject.CreateUpdateGrp();
             this.viewDelProjUC1 = new DBMidProject.viewDelProjUC();
             this.addUpdate1 = new DBMidProject.AddUpdate();
@@ -59,7 +60,8 @@
             this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
             this.deleteStdUC1 = new DBMidProject.DeleteStdUC();
             this.manageStd1 = new DBMidProject.AddStd();
-            this.viewDelGrp1 = new DBMidProject.viewDelGrp();
+            this.assignProjectUC1 = new DBMidProject.assignProjectUC();
+            this.button1 = new System.Windows.Forms.Button();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
             this.groupSidemenu.SuspendLayout();
@@ -148,6 +150,7 @@
             // 
             // sidemenu_panel
             // 
+            this.sidemenu_panel.Controls.Add(this.button1);
             this.sidemenu_panel.Controls.Add(this.groupSidemenu);
             this.sidemenu_panel.Controls.Add(this.manageGrp);
             this.sidemenu_panel.Controls.Add(this.projectSubmenu);
@@ -337,6 +340,14 @@
             this.viewAdvBtn.UseVisualStyleBackColor = false;
             this.viewAdvBtn.Click += new System.EventHandler(this.viewAdvBtn_Click);
             // 
+            // viewDelGrp1
+            // 
+            this.viewDelGrp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(215)))));
+            this.viewDelGrp1.Location = new System.Drawing.Point(153, 2);
+            this.viewDelGrp1.Name = "viewDelGrp1";
+            this.viewDelGrp1.Size = new System.Drawing.Size(665, 450);
+            this.viewDelGrp1.TabIndex = 13;
+            // 
             // createUpdateGrp1
             // 
             this.createUpdateGrp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(215)))));
@@ -417,13 +428,26 @@
             this.manageStd1.Size = new System.Drawing.Size(665, 447);
             this.manageStd1.TabIndex = 2;
             // 
-            // viewDelGrp1
+            // assignProjectUC1
             // 
-            this.viewDelGrp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(215)))));
-            this.viewDelGrp1.Location = new System.Drawing.Point(153, 2);
-            this.viewDelGrp1.Name = "viewDelGrp1";
-            this.viewDelGrp1.Size = new System.Drawing.Size(665, 450);
-            this.viewDelGrp1.TabIndex = 13;
+            this.assignProjectUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(245)))), ((int)(((byte)(207)))));
+            this.assignProjectUC1.Location = new System.Drawing.Point(153, 0);
+            this.assignProjectUC1.Name = "assignProjectUC1";
+            this.assignProjectUC1.Size = new System.Drawing.Size(665, 447);
+            this.assignProjectUC1.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Linen;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(3, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 29);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Assign Projects";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -431,6 +455,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(817, 450);
+            this.Controls.Add(this.assignProjectUC1);
             this.Controls.Add(this.viewDelGrp1);
             this.Controls.Add(this.createUpdateGrp1);
             this.Controls.Add(this.viewDelProjUC1);
@@ -489,6 +514,8 @@
         private System.Windows.Forms.Button viewDelGrp;
         private System.Windows.Forms.Button addUptGrp;
         private viewDelGrp viewDelGrp1;
+        private assignProjectUC assignProjectUC1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

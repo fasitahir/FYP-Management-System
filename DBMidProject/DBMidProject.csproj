@@ -59,6 +59,12 @@
     <Compile Include="AddUpdate.Designer.cs">
       <DependentUpon>AddUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="assignProjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="assignProjectUC.Designer.cs">
+      <DependentUpon>assignProjectUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuration.cs" />
     <Compile Include="CreateUpdateGrp.cs">
       <SubType>UserControl</SubType>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddUpdate.resx">
       <DependentUpon>AddUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assignProjectUC.resx">
+      <DependentUpon>assignProjectUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateUpdateGrp.resx">
       <DependentUpon>CreateUpdateGrp.cs</DependentUpon>

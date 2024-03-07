@@ -17,7 +17,6 @@ namespace DBMidProject
         {
             InitializeComponent();
             ShowCurrentStudents();
-            noteLabel.Hide();
             searchBar.KeyDown += TextBox_KeyDown;
         }
 
@@ -73,7 +72,7 @@ namespace DBMidProject
             da.Fill(dt);
             studentDataView.DataSource = dt;
             sizeset();
-
+            noteLabel.Show();
         }
 
         public void ShowCurrentStudents()
@@ -88,6 +87,7 @@ namespace DBMidProject
             da.Fill(dt);
             studentDataView.DataSource = dt;
             sizeset();
+            noteLabel.Hide();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -109,6 +109,7 @@ namespace DBMidProject
             da.Fill(dt);
             studentDataView.DataSource = dt;
             sizeset();
+            noteLabel.Show();
         }
     }
 }

@@ -36,7 +36,7 @@ namespace DBMidProject
                 return;
             }
 
-            string statusString = grpStatus.Text;
+            /*string statusString = grpStatus.Text;
 
             if (statusString.ToLower() == "active")
             {
@@ -55,7 +55,7 @@ namespace DBMidProject
             {
                 MessageBox.Show("Please Select a valid status");
                 return;
-            }
+            }*/
 
             int checkCount = 0;
             var con = Configuration.getInstance().getConnection();
@@ -80,7 +80,7 @@ namespace DBMidProject
                 SqlCommand check = new SqlCommand("SELECT COUNT(StudentId) " +
                     "FROM GroupStudent GS " +
                     "JOIN Student S ON GS.StudentId = S.Id " +
-                    "Where S.RegistrationNo = @RegistrationNo", con);
+                    "Where S.RegistrationNo = @RegistrationNo AND Status = 3", con);
 
                 check.Parameters.AddWithValue("@RegistrationNo", regNos[i]);
                 int checkRegNo = (int)check.ExecuteScalar();
@@ -104,7 +104,7 @@ namespace DBMidProject
                     "@Status, @AssignmentDate)", con);
 
                 cmd2.Parameters.AddWithValue("@RegNo", regNos[i].Trim());
-                cmd2.Parameters.AddWithValue("@Status", status);
+                cmd2.Parameters.AddWithValue("@Status", 3);
                 cmd2.Parameters.AddWithValue("@AssignmentDate", assignment);
                 cmd2.ExecuteNonQuery();
             }
