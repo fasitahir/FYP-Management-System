@@ -32,3 +32,4 @@ D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidPr
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.viewDelGrp.resources
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.assignProjectUC.resources
 D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.assignAdvisorsUC.resources
+D:\FasiTahir\4th Semester\DB\Projects\Mid Project\DBMidProject\obj\Debug\DBMidProject.ManageEvaluationUC.resources

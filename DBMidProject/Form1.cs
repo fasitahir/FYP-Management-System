@@ -37,7 +37,7 @@ namespace DBMidProject
             viewDelGrp1.Hide();
             assignProjectUC1.Hide();
             assignAdvisorsUC1.Hide();
-
+            manageEvaluationUC1.Hide();
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)
@@ -204,6 +204,13 @@ namespace DBMidProject
             assignAdvisorsUC1.Show();
             assignAdvisorsUC1.BringToFront();
             assignAdvisorsUC1.showAssignedData();
+        }
+
+        private void manageEvlBtn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            manageEvaluationUC1.Show();
+            manageEvaluationUC1.BringToFront();
         }
     }
 }

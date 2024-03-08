@@ -158,6 +158,19 @@ namespace DBMidProject
         {
             string roleString = advRole_CB.Text.ToLower();
             int role = 0;
+
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand check = new SqlCommand("SELECT COUNT(*) " +
+                "FROM ProjectAdvisor " +
+                "WHERE @AdvisorId = AdvisorId", con);
+            check.Parameters.AddWithValue("@AdvisorId", advisorId);
+            int checkId = (int)check.ExecuteScalar();
+            if (checkId > 0)
+            {
+                MessageBox.Show("Advisors can not be repeated");
+                return;
+            }
+
             if (roleString == "main advisor")
             {
                 role = 11;
@@ -176,7 +189,6 @@ namespace DBMidProject
                 return;
             }
 
-            var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand("INSERT INTO ProjectAdvisor " +
                 "VALUES (@AdvisorId, @ProjectId, @AdvisorRole, @AssignmentDate) ", con);
             

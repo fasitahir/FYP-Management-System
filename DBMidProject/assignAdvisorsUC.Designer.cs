@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(202, 69);
+            this.label1.Location = new System.Drawing.Point(226, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 102;
@@ -66,7 +66,7 @@
             "Main Advisor",
             "Co-Advisor",
             "Industry Advisor"});
-            this.advRole_CB.Location = new System.Drawing.Point(301, 68);
+            this.advRole_CB.Location = new System.Drawing.Point(325, 74);
             this.advRole_CB.Name = "advRole_CB";
             this.advRole_CB.Size = new System.Drawing.Size(121, 21);
             this.advRole_CB.TabIndex = 101;
@@ -75,7 +75,7 @@
             // 
             this.assignAdvBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.assignAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.assignAdvBtn.Location = new System.Drawing.Point(279, 132);
+            this.assignAdvBtn.Location = new System.Drawing.Point(305, 146);
             this.assignAdvBtn.Name = "assignAdvBtn";
             this.assignAdvBtn.Size = new System.Drawing.Size(99, 21);
             this.assignAdvBtn.TabIndex = 100;
@@ -87,11 +87,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(247, 0);
+            this.label8.Location = new System.Drawing.Point(273, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 32);
+            this.label8.Size = new System.Drawing.Size(179, 32);
             this.label8.TabIndex = 99;
-            this.label8.Text = "Assign Project";
+            this.label8.Text = "Assign Advisors";
             // 
             // panel6
             // 
@@ -99,16 +99,16 @@
             this.panel6.Controls.Add(this.advisorDataView);
             this.panel6.Controls.Add(this.projectDataView);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 265);
+            this.panel6.Location = new System.Drawing.Point(0, 325);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(665, 182);
+            this.panel6.Size = new System.Drawing.Size(715, 182);
             this.panel6.TabIndex = 103;
             // 
             // assignedDataView
             // 
             this.assignedDataView.BackgroundColor = System.Drawing.Color.Gray;
             this.assignedDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.assignedDataView.Location = new System.Drawing.Point(19, 14);
+            this.assignedDataView.Location = new System.Drawing.Point(42, 14);
             this.assignedDataView.Name = "assignedDataView";
             this.assignedDataView.ReadOnly = true;
             this.assignedDataView.Size = new System.Drawing.Size(630, 165);
@@ -118,7 +118,7 @@
             // 
             this.advisorDataView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.advisorDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advisorDataView.Location = new System.Drawing.Point(19, 3);
+            this.advisorDataView.Location = new System.Drawing.Point(42, 3);
             this.advisorDataView.Name = "advisorDataView";
             this.advisorDataView.ReadOnly = true;
             this.advisorDataView.Size = new System.Drawing.Size(630, 165);
@@ -127,7 +127,7 @@
             // projectDataView
             // 
             this.projectDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.projectDataView.Location = new System.Drawing.Point(19, 14);
+            this.projectDataView.Location = new System.Drawing.Point(42, 14);
             this.projectDataView.Name = "projectDataView";
             this.projectDataView.ReadOnly = true;
             this.projectDataView.Size = new System.Drawing.Size(630, 165);
@@ -138,7 +138,7 @@
             // 
             this.showProjects.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.showProjects.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.showProjects.Location = new System.Drawing.Point(123, 184);
+            this.showProjects.Location = new System.Drawing.Point(133, 252);
             this.showProjects.Name = "showProjects";
             this.showProjects.Size = new System.Drawing.Size(92, 21);
             this.showProjects.TabIndex = 106;
@@ -151,7 +151,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(61, 98);
+            this.label2.Location = new System.Drawing.Point(87, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(541, 17);
             this.label2.TabIndex = 107;
@@ -162,7 +162,7 @@
             // 
             this.viewAdvisorsBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewAdvisorsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.viewAdvisorsBtn.Location = new System.Drawing.Point(452, 184);
+            this.viewAdvisorsBtn.Location = new System.Drawing.Point(478, 252);
             this.viewAdvisorsBtn.Name = "viewAdvisorsBtn";
             this.viewAdvisorsBtn.Size = new System.Drawing.Size(92, 21);
             this.viewAdvisorsBtn.TabIndex = 108;
@@ -174,7 +174,7 @@
             // 
             this.projectLabel.AutoSize = true;
             this.projectLabel.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectLabel.Location = new System.Drawing.Point(275, 242);
+            this.projectLabel.Location = new System.Drawing.Point(297, 302);
             this.projectLabel.Name = "projectLabel";
             this.projectLabel.Size = new System.Drawing.Size(91, 20);
             this.projectLabel.TabIndex = 109;
@@ -184,7 +184,7 @@
             // 
             this.advisorLabel.AutoSize = true;
             this.advisorLabel.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.advisorLabel.Location = new System.Drawing.Point(275, 242);
+            this.advisorLabel.Location = new System.Drawing.Point(297, 302);
             this.advisorLabel.Name = "advisorLabel";
             this.advisorLabel.Size = new System.Drawing.Size(101, 20);
             this.advisorLabel.TabIndex = 110;
@@ -194,7 +194,7 @@
             // 
             this.viewAssigned.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewAssigned.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.viewAssigned.Location = new System.Drawing.Point(265, 184);
+            this.viewAssigned.Location = new System.Drawing.Point(289, 199);
             this.viewAssigned.Name = "viewAssigned";
             this.viewAssigned.Size = new System.Drawing.Size(127, 21);
             this.viewAssigned.TabIndex = 111;
@@ -206,7 +206,7 @@
             // 
             this.assignedLabel.AutoSize = true;
             this.assignedLabel.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assignedLabel.Location = new System.Drawing.Point(277, 242);
+            this.assignedLabel.Location = new System.Drawing.Point(299, 302);
             this.assignedLabel.Name = "assignedLabel";
             this.assignedLabel.Size = new System.Drawing.Size(105, 20);
             this.assignedLabel.TabIndex = 112;
@@ -230,7 +230,7 @@
             this.Controls.Add(this.assignAdvBtn);
             this.Controls.Add(this.label8);
             this.Name = "assignAdvisorsUC";
-            this.Size = new System.Drawing.Size(665, 447);
+            this.Size = new System.Drawing.Size(715, 507);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.assignedDataView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advisorDataView)).EndInit();

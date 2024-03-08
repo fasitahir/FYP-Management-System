@@ -96,6 +96,12 @@
     <Compile Include="AddStd.Designer.cs">
       <DependentUpon>AddStd.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageEvaluationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageEvaluationUC.Designer.cs">
+      <DependentUpon>ManageEvaluationUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdateAdvUC.cs">
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddStd.resx">
       <DependentUpon>AddStd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageEvaluationUC.resx">
+      <DependentUpon>ManageEvaluationUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
