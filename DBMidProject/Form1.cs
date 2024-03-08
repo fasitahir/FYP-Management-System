@@ -37,6 +37,7 @@ namespace DBMidProject
             viewDelGrp1.Hide();
             assignProjectUC1.Hide();
             assignAdvisorsUC1.Hide();
+
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)

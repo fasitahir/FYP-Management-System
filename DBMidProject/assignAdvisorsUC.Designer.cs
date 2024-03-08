@@ -64,7 +64,7 @@
             this.advRole_CB.FormattingEnabled = true;
             this.advRole_CB.Items.AddRange(new object[] {
             "Main Advisor",
-            "Co-Advisror",
+            "Co-Advisor",
             "Industry Advisor"});
             this.advRole_CB.Location = new System.Drawing.Point(301, 68);
             this.advRole_CB.Name = "advRole_CB";

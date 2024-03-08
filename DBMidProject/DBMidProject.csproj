@@ -201,10 +201,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CS logo.png" />
+    <None Include="Resources\cs-logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cs-logo.png" />
+    <None Include="Resources\logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,7 +45,6 @@
             this.addUptBtn = new System.Windows.Forms.Button();
             this.manageProjBtn = new System.Windows.Forms.Button();
             this.manageAdvBtn = new System.Windows.Forms.Button();
-            this.logo_panel = new System.Windows.Forms.Panel();
             this.advSubmenu = new System.Windows.Forms.Panel();
             this.updateAdvBtn = new System.Windows.Forms.Button();
             this.addAdvBtn = new System.Windows.Forms.Button();
@@ -64,6 +63,9 @@
             this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
             this.deleteStdUC1 = new DBMidProject.DeleteStdUC();
             this.manageStd1 = new DBMidProject.AddStd();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.logo_panel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
             this.groupSidemenu.SuspendLayout();
@@ -73,10 +75,10 @@
             // 
             // ManageStd
             // 
-            this.ManageStd.BackColor = System.Drawing.Color.Linen;
+            this.ManageStd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.ManageStd.FlatAppearance.BorderSize = 0;
             this.ManageStd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageStd.Location = new System.Drawing.Point(3, 122);
+            this.ManageStd.Location = new System.Drawing.Point(0, 131);
             this.ManageStd.Name = "ManageStd";
             this.ManageStd.Size = new System.Drawing.Size(150, 29);
             this.ManageStd.TabIndex = 0;
@@ -88,24 +90,24 @@
             // 
             // stdSubMenu
             // 
-            this.stdSubMenu.BackColor = System.Drawing.Color.Gray;
+            this.stdSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(95)))), ((int)(((byte)(99)))));
             this.stdSubMenu.Controls.Add(this.deleteStd_btn);
             this.stdSubMenu.Controls.Add(this.updateStd_btn);
             this.stdSubMenu.Controls.Add(this.addStd_btn);
             this.stdSubMenu.Controls.Add(this.viewStd_btn);
-            this.stdSubMenu.Location = new System.Drawing.Point(92, 148);
+            this.stdSubMenu.Location = new System.Drawing.Point(83, 160);
             this.stdSubMenu.Name = "stdSubMenu";
-            this.stdSubMenu.Size = new System.Drawing.Size(61, 115);
+            this.stdSubMenu.Size = new System.Drawing.Size(67, 115);
             this.stdSubMenu.TabIndex = 1;
             // 
             // deleteStd_btn
             // 
-            this.deleteStd_btn.BackColor = System.Drawing.Color.Linen;
+            this.deleteStd_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.deleteStd_btn.FlatAppearance.BorderSize = 0;
             this.deleteStd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteStd_btn.Location = new System.Drawing.Point(2, 90);
             this.deleteStd_btn.Name = "deleteStd_btn";
-            this.deleteStd_btn.Size = new System.Drawing.Size(56, 23);
+            this.deleteStd_btn.Size = new System.Drawing.Size(62, 23);
             this.deleteStd_btn.TabIndex = 5;
             this.deleteStd_btn.Text = "Delete";
             this.deleteStd_btn.UseVisualStyleBackColor = false;
@@ -113,12 +115,12 @@
             // 
             // updateStd_btn
             // 
-            this.updateStd_btn.BackColor = System.Drawing.Color.Linen;
+            this.updateStd_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.updateStd_btn.FlatAppearance.BorderSize = 0;
             this.updateStd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateStd_btn.Location = new System.Drawing.Point(3, 61);
             this.updateStd_btn.Name = "updateStd_btn";
-            this.updateStd_btn.Size = new System.Drawing.Size(56, 23);
+            this.updateStd_btn.Size = new System.Drawing.Size(61, 23);
             this.updateStd_btn.TabIndex = 4;
             this.updateStd_btn.Text = "Update";
             this.updateStd_btn.UseVisualStyleBackColor = false;
@@ -126,12 +128,12 @@
             // 
             // addStd_btn
             // 
-            this.addStd_btn.BackColor = System.Drawing.Color.Linen;
+            this.addStd_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.addStd_btn.FlatAppearance.BorderSize = 0;
             this.addStd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addStd_btn.Location = new System.Drawing.Point(3, 3);
             this.addStd_btn.Name = "addStd_btn";
-            this.addStd_btn.Size = new System.Drawing.Size(56, 23);
+            this.addStd_btn.Size = new System.Drawing.Size(60, 23);
             this.addStd_btn.TabIndex = 2;
             this.addStd_btn.Text = "Add";
             this.addStd_btn.UseVisualStyleBackColor = false;
@@ -139,12 +141,12 @@
             // 
             // viewStd_btn
             // 
-            this.viewStd_btn.BackColor = System.Drawing.Color.Linen;
+            this.viewStd_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.viewStd_btn.FlatAppearance.BorderSize = 0;
             this.viewStd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewStd_btn.Location = new System.Drawing.Point(3, 32);
             this.viewStd_btn.Name = "viewStd_btn";
-            this.viewStd_btn.Size = new System.Drawing.Size(56, 23);
+            this.viewStd_btn.Size = new System.Drawing.Size(61, 23);
             this.viewStd_btn.TabIndex = 3;
             this.viewStd_btn.Text = "View";
             this.viewStd_btn.UseVisualStyleBackColor = false;
@@ -152,17 +154,18 @@
             // 
             // sidemenu_panel
             // 
-            this.sidemenu_panel.Controls.Add(this.assignProjectBtn);
-            this.sidemenu_panel.Controls.Add(this.groupSidemenu);
-            this.sidemenu_panel.Controls.Add(this.manageGrp);
+            this.sidemenu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(105)))), ((int)(((byte)(110)))));
             this.sidemenu_panel.Controls.Add(this.projectSubmenu);
             this.sidemenu_panel.Controls.Add(this.manageProjBtn);
+            this.sidemenu_panel.Controls.Add(this.groupSidemenu);
+            this.sidemenu_panel.Controls.Add(this.assignProjectBtn);
+            this.sidemenu_panel.Controls.Add(this.manageGrp);
             this.sidemenu_panel.Controls.Add(this.manageAdvBtn);
             this.sidemenu_panel.Controls.Add(this.logo_panel);
             this.sidemenu_panel.Controls.Add(this.ManageStd);
+            this.sidemenu_panel.Controls.Add(this.assignAdvisorBtn);
             this.sidemenu_panel.Controls.Add(this.stdSubMenu);
             this.sidemenu_panel.Controls.Add(this.advSubmenu);
-            this.sidemenu_panel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenu_panel.Location = new System.Drawing.Point(0, 0);
             this.sidemenu_panel.Name = "sidemenu_panel";
             this.sidemenu_panel.Size = new System.Drawing.Size(153, 450);
@@ -171,10 +174,10 @@
             // 
             // assignProjectBtn
             // 
-            this.assignProjectBtn.BackColor = System.Drawing.Color.Linen;
+            this.assignProjectBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.assignProjectBtn.FlatAppearance.BorderSize = 0;
             this.assignProjectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.assignProjectBtn.Location = new System.Drawing.Point(3, 262);
+            this.assignProjectBtn.Location = new System.Drawing.Point(1, 346);
             this.assignProjectBtn.Name = "assignProjectBtn";
             this.assignProjectBtn.Size = new System.Drawing.Size(150, 29);
             this.assignProjectBtn.TabIndex = 9;
@@ -184,17 +187,17 @@
             // 
             // groupSidemenu
             // 
-            this.groupSidemenu.BackColor = System.Drawing.Color.Gray;
+            this.groupSidemenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(95)))), ((int)(((byte)(99)))));
             this.groupSidemenu.Controls.Add(this.viewDelGrp);
             this.groupSidemenu.Controls.Add(this.addUptGrp);
-            this.groupSidemenu.Location = new System.Drawing.Point(80, 258);
+            this.groupSidemenu.Location = new System.Drawing.Point(80, 322);
             this.groupSidemenu.Name = "groupSidemenu";
             this.groupSidemenu.Size = new System.Drawing.Size(70, 59);
             this.groupSidemenu.TabIndex = 8;
             // 
             // viewDelGrp
             // 
-            this.viewDelGrp.BackColor = System.Drawing.Color.Linen;
+            this.viewDelGrp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.viewDelGrp.FlatAppearance.BorderSize = 0;
             this.viewDelGrp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewDelGrp.Location = new System.Drawing.Point(0, 30);
@@ -207,7 +210,7 @@
             // 
             // addUptGrp
             // 
-            this.addUptGrp.BackColor = System.Drawing.Color.Linen;
+            this.addUptGrp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.addUptGrp.FlatAppearance.BorderSize = 0;
             this.addUptGrp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addUptGrp.Location = new System.Drawing.Point(0, 3);
@@ -220,10 +223,10 @@
             // 
             // manageGrp
             // 
-            this.manageGrp.BackColor = System.Drawing.Color.Linen;
+            this.manageGrp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.manageGrp.FlatAppearance.BorderSize = 0;
             this.manageGrp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageGrp.Location = new System.Drawing.Point(1, 227);
+            this.manageGrp.Location = new System.Drawing.Point(0, 293);
             this.manageGrp.Name = "manageGrp";
             this.manageGrp.Size = new System.Drawing.Size(150, 29);
             this.manageGrp.TabIndex = 8;
@@ -233,17 +236,17 @@
             // 
             // projectSubmenu
             // 
-            this.projectSubmenu.BackColor = System.Drawing.Color.Gray;
+            this.projectSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(95)))), ((int)(((byte)(99)))));
             this.projectSubmenu.Controls.Add(this.viewDelBtn);
             this.projectSubmenu.Controls.Add(this.addUptBtn);
-            this.projectSubmenu.Location = new System.Drawing.Point(80, 221);
+            this.projectSubmenu.Location = new System.Drawing.Point(80, 266);
             this.projectSubmenu.Name = "projectSubmenu";
             this.projectSubmenu.Size = new System.Drawing.Size(70, 59);
             this.projectSubmenu.TabIndex = 7;
             // 
             // viewDelBtn
             // 
-            this.viewDelBtn.BackColor = System.Drawing.Color.Linen;
+            this.viewDelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.viewDelBtn.FlatAppearance.BorderSize = 0;
             this.viewDelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewDelBtn.Location = new System.Drawing.Point(0, 30);
@@ -256,7 +259,7 @@
             // 
             // addUptBtn
             // 
-            this.addUptBtn.BackColor = System.Drawing.Color.Linen;
+            this.addUptBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.addUptBtn.FlatAppearance.BorderSize = 0;
             this.addUptBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addUptBtn.Location = new System.Drawing.Point(0, 3);
@@ -269,10 +272,10 @@
             // 
             // manageProjBtn
             // 
-            this.manageProjBtn.BackColor = System.Drawing.Color.Linen;
+            this.manageProjBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.manageProjBtn.FlatAppearance.BorderSize = 0;
             this.manageProjBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageProjBtn.Location = new System.Drawing.Point(1, 192);
+            this.manageProjBtn.Location = new System.Drawing.Point(0, 239);
             this.manageProjBtn.Name = "manageProjBtn";
             this.manageProjBtn.Size = new System.Drawing.Size(150, 29);
             this.manageProjBtn.TabIndex = 7;
@@ -282,10 +285,10 @@
             // 
             // manageAdvBtn
             // 
-            this.manageAdvBtn.BackColor = System.Drawing.Color.Linen;
+            this.manageAdvBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.manageAdvBtn.FlatAppearance.BorderSize = 0;
             this.manageAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageAdvBtn.Location = new System.Drawing.Point(3, 157);
+            this.manageAdvBtn.Location = new System.Drawing.Point(1, 183);
             this.manageAdvBtn.Name = "manageAdvBtn";
             this.manageAdvBtn.Size = new System.Drawing.Size(150, 29);
             this.manageAdvBtn.TabIndex = 3;
@@ -293,37 +296,25 @@
             this.manageAdvBtn.UseVisualStyleBackColor = false;
             this.manageAdvBtn.Click += new System.EventHandler(this.manageAdvBtn_Click);
             // 
-            // logo_panel
-            // 
-            this.logo_panel.BackColor = System.Drawing.Color.Transparent;
-            this.logo_panel.BackgroundImage = global::DBMidProject.Properties.Resources.cs_logo;
-            this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logo_panel.Location = new System.Drawing.Point(0, 0);
-            this.logo_panel.Name = "logo_panel";
-            this.logo_panel.Size = new System.Drawing.Size(153, 100);
-            this.logo_panel.TabIndex = 2;
-            this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
-            // 
             // advSubmenu
             // 
-            this.advSubmenu.BackColor = System.Drawing.Color.Gray;
+            this.advSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(95)))), ((int)(((byte)(99)))));
             this.advSubmenu.Controls.Add(this.updateAdvBtn);
             this.advSubmenu.Controls.Add(this.addAdvBtn);
             this.advSubmenu.Controls.Add(this.viewAdvBtn);
-            this.advSubmenu.Location = new System.Drawing.Point(80, 186);
+            this.advSubmenu.Location = new System.Drawing.Point(80, 213);
             this.advSubmenu.Name = "advSubmenu";
-            this.advSubmenu.Size = new System.Drawing.Size(70, 88);
+            this.advSubmenu.Size = new System.Drawing.Size(68, 88);
             this.advSubmenu.TabIndex = 6;
             // 
             // updateAdvBtn
             // 
-            this.updateAdvBtn.BackColor = System.Drawing.Color.Linen;
+            this.updateAdvBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.updateAdvBtn.FlatAppearance.BorderSize = 0;
             this.updateAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateAdvBtn.Location = new System.Drawing.Point(3, 61);
             this.updateAdvBtn.Name = "updateAdvBtn";
-            this.updateAdvBtn.Size = new System.Drawing.Size(67, 23);
+            this.updateAdvBtn.Size = new System.Drawing.Size(63, 23);
             this.updateAdvBtn.TabIndex = 4;
             this.updateAdvBtn.Text = "Update";
             this.updateAdvBtn.UseVisualStyleBackColor = false;
@@ -331,12 +322,12 @@
             // 
             // addAdvBtn
             // 
-            this.addAdvBtn.BackColor = System.Drawing.Color.Linen;
+            this.addAdvBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.addAdvBtn.FlatAppearance.BorderSize = 0;
             this.addAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addAdvBtn.Location = new System.Drawing.Point(3, 3);
             this.addAdvBtn.Name = "addAdvBtn";
-            this.addAdvBtn.Size = new System.Drawing.Size(67, 23);
+            this.addAdvBtn.Size = new System.Drawing.Size(64, 23);
             this.addAdvBtn.TabIndex = 2;
             this.addAdvBtn.Text = "Add";
             this.addAdvBtn.UseVisualStyleBackColor = false;
@@ -344,12 +335,12 @@
             // 
             // viewAdvBtn
             // 
-            this.viewAdvBtn.BackColor = System.Drawing.Color.Linen;
+            this.viewAdvBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.viewAdvBtn.FlatAppearance.BorderSize = 0;
             this.viewAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewAdvBtn.Location = new System.Drawing.Point(3, 32);
             this.viewAdvBtn.Name = "viewAdvBtn";
-            this.viewAdvBtn.Size = new System.Drawing.Size(67, 23);
+            this.viewAdvBtn.Size = new System.Drawing.Size(63, 23);
             this.viewAdvBtn.TabIndex = 3;
             this.viewAdvBtn.Text = "View\\Del";
             this.viewAdvBtn.UseVisualStyleBackColor = false;
@@ -357,10 +348,12 @@
             // 
             // assignAdvisorBtn
             // 
-            this.assignAdvisorBtn.BackColor = System.Drawing.Color.Linen;
+            this.assignAdvisorBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.assignAdvisorBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.assignAdvisorBtn.FlatAppearance.BorderSize = 0;
             this.assignAdvisorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.assignAdvisorBtn.Location = new System.Drawing.Point(3, 297);
+            this.assignAdvisorBtn.Location = new System.Drawing.Point(1, 392);
             this.assignAdvisorBtn.Name = "assignAdvisorBtn";
             this.assignAdvisorBtn.Size = new System.Drawing.Size(150, 29);
             this.assignAdvisorBtn.TabIndex = 10;
@@ -371,7 +364,7 @@
             // assignAdvisorsUC1
             // 
             this.assignAdvisorsUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(211)))), ((int)(((byte)(224)))));
-            this.assignAdvisorsUC1.Location = new System.Drawing.Point(153, 0);
+            this.assignAdvisorsUC1.Location = new System.Drawing.Point(152, 0);
             this.assignAdvisorsUC1.Name = "assignAdvisorsUC1";
             this.assignAdvisorsUC1.Size = new System.Drawing.Size(665, 449);
             this.assignAdvisorsUC1.TabIndex = 15;
@@ -379,7 +372,7 @@
             // assignProjectUC1
             // 
             this.assignProjectUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(245)))), ((int)(((byte)(207)))));
-            this.assignProjectUC1.Location = new System.Drawing.Point(153, 0);
+            this.assignProjectUC1.Location = new System.Drawing.Point(152, 0);
             this.assignProjectUC1.Name = "assignProjectUC1";
             this.assignProjectUC1.Size = new System.Drawing.Size(665, 447);
             this.assignProjectUC1.TabIndex = 14;
@@ -387,7 +380,7 @@
             // viewDelGrp1
             // 
             this.viewDelGrp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(215)))));
-            this.viewDelGrp1.Location = new System.Drawing.Point(153, 2);
+            this.viewDelGrp1.Location = new System.Drawing.Point(152, 0);
             this.viewDelGrp1.Name = "viewDelGrp1";
             this.viewDelGrp1.Size = new System.Drawing.Size(665, 450);
             this.viewDelGrp1.TabIndex = 13;
@@ -419,7 +412,7 @@
             // updateAdvUC1
             // 
             this.updateAdvUC1.BackColor = System.Drawing.Color.Snow;
-            this.updateAdvUC1.Location = new System.Drawing.Point(153, 0);
+            this.updateAdvUC1.Location = new System.Drawing.Point(152, 0);
             this.updateAdvUC1.Name = "updateAdvUC1";
             this.updateAdvUC1.Size = new System.Drawing.Size(665, 450);
             this.updateAdvUC1.TabIndex = 9;
@@ -435,7 +428,7 @@
             // addAdvisor1
             // 
             this.addAdvisor1.BackColor = System.Drawing.Color.Cornsilk;
-            this.addAdvisor1.Location = new System.Drawing.Point(153, 0);
+            this.addAdvisor1.Location = new System.Drawing.Point(152, 0);
             this.addAdvisor1.Name = "addAdvisor1";
             this.addAdvisor1.Size = new System.Drawing.Size(665, 447);
             this.addAdvisor1.TabIndex = 7;
@@ -443,9 +436,9 @@
             // updateStdUC1
             // 
             this.updateStdUC1.BackColor = System.Drawing.Color.MistyRose;
-            this.updateStdUC1.Location = new System.Drawing.Point(153, 2);
+            this.updateStdUC1.Location = new System.Drawing.Point(152, 0);
             this.updateStdUC1.Name = "updateStdUC1";
-            this.updateStdUC1.Size = new System.Drawing.Size(665, 447);
+            this.updateStdUC1.Size = new System.Drawing.Size(665, 450);
             this.updateStdUC1.TabIndex = 6;
             // 
             // viewAllStdUC1
@@ -459,7 +452,7 @@
             // deleteStdUC1
             // 
             this.deleteStdUC1.BackColor = System.Drawing.Color.Thistle;
-            this.deleteStdUC1.Location = new System.Drawing.Point(153, 2);
+            this.deleteStdUC1.Location = new System.Drawing.Point(152, 0);
             this.deleteStdUC1.Name = "deleteStdUC1";
             this.deleteStdUC1.Size = new System.Drawing.Size(665, 447);
             this.deleteStdUC1.TabIndex = 4;
@@ -467,18 +460,49 @@
             // manageStd1
             // 
             this.manageStd1.BackColor = System.Drawing.Color.Wheat;
-            this.manageStd1.Location = new System.Drawing.Point(153, 2);
+            this.manageStd1.Location = new System.Drawing.Point(152, 0);
             this.manageStd1.Name = "manageStd1";
             this.manageStd1.Size = new System.Drawing.Size(665, 447);
             this.manageStd1.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(133)))), ((int)(((byte)(140)))));
+            this.panel1.BackgroundImage = global::DBMidProject.Properties.Resources.main;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(153, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(667, 352);
+            this.panel1.TabIndex = 11;
+            // 
+            // logo_panel
+            // 
+            this.logo_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(133)))), ((int)(((byte)(140)))));
+            this.logo_panel.BackgroundImage = global::DBMidProject.Properties.Resources.cs_logo;
+            this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logo_panel.Location = new System.Drawing.Point(0, 0);
+            this.logo_panel.Name = "logo_panel";
+            this.logo_panel.Size = new System.Drawing.Size(153, 100);
+            this.logo_panel.TabIndex = 2;
+            this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(350, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(329, 31);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "FYP Management System";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(133)))), ((int)(((byte)(140)))));
             this.ClientSize = new System.Drawing.Size(817, 450);
-            this.Controls.Add(this.assignAdvisorBtn);
             this.Controls.Add(this.assignAdvisorsUC1);
             this.Controls.Add(this.assignProjectUC1);
             this.Controls.Add(this.viewDelGrp1);
@@ -489,10 +513,12 @@
             this.Controls.Add(this.viewAdvisorUC1);
             this.Controls.Add(this.addAdvisor1);
             this.Controls.Add(this.updateStdUC1);
-            this.Controls.Add(this.viewAllStdUC1);
             this.Controls.Add(this.deleteStdUC1);
-            this.Controls.Add(this.sidemenu_panel);
             this.Controls.Add(this.manageStd1);
+            this.Controls.Add(this.viewAllStdUC1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.sidemenu_panel);
+            this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(718, 437);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -502,6 +528,7 @@
             this.projectSubmenu.ResumeLayout(false);
             this.advSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -543,6 +570,8 @@
         private System.Windows.Forms.Button assignProjectBtn;
         private assignAdvisorsUC assignAdvisorsUC1;
         private System.Windows.Forms.Button assignAdvisorBtn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

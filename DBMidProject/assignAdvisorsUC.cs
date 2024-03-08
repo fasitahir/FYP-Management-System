@@ -198,7 +198,7 @@ namespace DBMidProject
 
 
             cmd.ExecuteNonQuery();
-
+            MessageBox.Show("Saved Successfully");
 
         }
 
