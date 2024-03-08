@@ -102,6 +102,12 @@
     <Compile Include="ManageEvaluationUC.Designer.cs">
       <DependentUpon>ManageEvaluationUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarkEvaluationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarkEvaluationUC.Designer.cs">
+      <DependentUpon>MarkEvaluationUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdateAdvUC.cs">
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageEvaluationUC.resx">
       <DependentUpon>ManageEvaluationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkEvaluationUC.resx">
+      <DependentUpon>MarkEvaluationUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

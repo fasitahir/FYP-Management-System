@@ -35,7 +35,7 @@
             this.addStd_btn = new System.Windows.Forms.Button();
             this.viewStd_btn = new System.Windows.Forms.Button();
             this.sidemenu_panel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.markEvlBtn = new System.Windows.Forms.Button();
             this.manageEvlBtn = new System.Windows.Forms.Button();
             this.projectSubmenu = new System.Windows.Forms.Panel();
             this.viewDelBtn = new System.Windows.Forms.Button();
@@ -47,12 +47,15 @@
             this.assignProjectBtn = new System.Windows.Forms.Button();
             this.manageGrp = new System.Windows.Forms.Button();
             this.manageAdvBtn = new System.Windows.Forms.Button();
-            this.logo_panel = new System.Windows.Forms.Panel();
             this.assignAdvisorBtn = new System.Windows.Forms.Button();
             this.advSubmenu = new System.Windows.Forms.Panel();
             this.updateAdvBtn = new System.Windows.Forms.Button();
             this.addAdvBtn = new System.Windows.Forms.Button();
             this.viewAdvBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.logo_panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.manageEvaluationUC1 = new DBMidProject.ManageEvaluationUC();
             this.assignAdvisorsUC1 = new DBMidProject.assignAdvisorsUC();
             this.assignProjectUC1 = new DBMidProject.assignProjectUC();
             this.viewDelGrp1 = new DBMidProject.viewDelGrp();
@@ -63,12 +66,10 @@
             this.viewAdvisorUC1 = new DBMidProject.ViewAdvisorUC();
             this.addAdvisor1 = new DBMidProject.AddAdvisor();
             this.updateStdUC1 = new DBMidProject.UpdateStdUC();
-            this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
             this.deleteStdUC1 = new DBMidProject.DeleteStdUC();
             this.manageStd1 = new DBMidProject.AddStd();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.manageEvaluationUC1 = new DBMidProject.ManageEvaluationUC();
+            this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
+            this.markEvaluationUC1 = new DBMidProject.MarkEvaluationUC();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
             this.projectSubmenu.SuspendLayout();
@@ -158,7 +159,7 @@
             // sidemenu_panel
             // 
             this.sidemenu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(105)))), ((int)(((byte)(110)))));
-            this.sidemenu_panel.Controls.Add(this.button2);
+            this.sidemenu_panel.Controls.Add(this.markEvlBtn);
             this.sidemenu_panel.Controls.Add(this.manageEvlBtn);
             this.sidemenu_panel.Controls.Add(this.projectSubmenu);
             this.sidemenu_panel.Controls.Add(this.manageProjBtn);
@@ -177,17 +178,18 @@
             this.sidemenu_panel.TabIndex = 3;
             this.sidemenu_panel.Click += new System.EventHandler(this.sidemenu_panel_Click);
             // 
-            // button2
+            // markEvlBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1, 471);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 29);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Assign Advisors";
-            this.button2.UseVisualStyleBackColor = false;
+            this.markEvlBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.markEvlBtn.FlatAppearance.BorderSize = 0;
+            this.markEvlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markEvlBtn.Location = new System.Drawing.Point(1, 471);
+            this.markEvlBtn.Name = "markEvlBtn";
+            this.markEvlBtn.Size = new System.Drawing.Size(150, 29);
+            this.markEvlBtn.TabIndex = 12;
+            this.markEvlBtn.Text = "Mark Evaluation";
+            this.markEvlBtn.UseVisualStyleBackColor = false;
+            this.markEvlBtn.Click += new System.EventHandler(this.markEvlBtn_Click);
             // 
             // manageEvlBtn
             // 
@@ -326,18 +328,6 @@
             this.manageAdvBtn.UseVisualStyleBackColor = false;
             this.manageAdvBtn.Click += new System.EventHandler(this.manageAdvBtn_Click);
             // 
-            // logo_panel
-            // 
-            this.logo_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(128)))));
-            this.logo_panel.BackgroundImage = global::DBMidProject.Properties.Resources.cs_logo;
-            this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logo_panel.Location = new System.Drawing.Point(0, 0);
-            this.logo_panel.Name = "logo_panel";
-            this.logo_panel.Size = new System.Drawing.Size(153, 100);
-            this.logo_panel.TabIndex = 2;
-            this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
-            // 
             // assignAdvisorBtn
             // 
             this.assignAdvisorBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
@@ -400,6 +390,46 @@
             this.viewAdvBtn.Text = "View\\Del";
             this.viewAdvBtn.UseVisualStyleBackColor = false;
             this.viewAdvBtn.Click += new System.EventHandler(this.viewAdvBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(350, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(329, 31);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "FYP Management System";
+            // 
+            // logo_panel
+            // 
+            this.logo_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(128)))));
+            this.logo_panel.BackgroundImage = global::DBMidProject.Properties.Resources.cs_logo;
+            this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logo_panel.Location = new System.Drawing.Point(0, 0);
+            this.logo_panel.Name = "logo_panel";
+            this.logo_panel.Size = new System.Drawing.Size(153, 100);
+            this.logo_panel.TabIndex = 2;
+            this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(133)))), ((int)(((byte)(140)))));
+            this.panel1.BackgroundImage = global::DBMidProject.Properties.Resources.main;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(153, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(717, 410);
+            this.panel1.TabIndex = 11;
+            // 
+            // manageEvaluationUC1
+            // 
+            this.manageEvaluationUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(194)))), ((int)(((byte)(222)))));
+            this.manageEvaluationUC1.Location = new System.Drawing.Point(152, 1);
+            this.manageEvaluationUC1.Name = "manageEvaluationUC1";
+            this.manageEvaluationUC1.Size = new System.Drawing.Size(715, 507);
+            this.manageEvaluationUC1.TabIndex = 16;
             // 
             // assignAdvisorsUC1
             // 
@@ -481,14 +511,6 @@
             this.updateStdUC1.Size = new System.Drawing.Size(715, 508);
             this.updateStdUC1.TabIndex = 6;
             // 
-            // viewAllStdUC1
-            // 
-            this.viewAllStdUC1.BackColor = System.Drawing.Color.Bisque;
-            this.viewAllStdUC1.Location = new System.Drawing.Point(153, 0);
-            this.viewAllStdUC1.Name = "viewAllStdUC1";
-            this.viewAllStdUC1.Size = new System.Drawing.Size(715, 505);
-            this.viewAllStdUC1.TabIndex = 5;
-            // 
             // deleteStdUC1
             // 
             this.deleteStdUC1.BackColor = System.Drawing.Color.Thistle;
@@ -505,33 +527,21 @@
             this.manageStd1.Size = new System.Drawing.Size(715, 505);
             this.manageStd1.TabIndex = 2;
             // 
-            // panel1
+            // viewAllStdUC1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(133)))), ((int)(((byte)(140)))));
-            this.panel1.BackgroundImage = global::DBMidProject.Properties.Resources.main;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(153, 98);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(717, 410);
-            this.panel1.TabIndex = 11;
+            this.viewAllStdUC1.BackColor = System.Drawing.Color.Bisque;
+            this.viewAllStdUC1.Location = new System.Drawing.Point(153, 0);
+            this.viewAllStdUC1.Name = "viewAllStdUC1";
+            this.viewAllStdUC1.Size = new System.Drawing.Size(715, 505);
+            this.viewAllStdUC1.TabIndex = 5;
             // 
-            // label1
+            // markEvaluationUC1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(350, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 31);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "FYP Management System";
-            // 
-            // manageEvaluationUC1
-            // 
-            this.manageEvaluationUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(194)))), ((int)(((byte)(222)))));
-            this.manageEvaluationUC1.Location = new System.Drawing.Point(152, 1);
-            this.manageEvaluationUC1.Name = "manageEvaluationUC1";
-            this.manageEvaluationUC1.Size = new System.Drawing.Size(715, 507);
-            this.manageEvaluationUC1.TabIndex = 16;
+            this.markEvaluationUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(157)))), ((int)(((byte)(230)))));
+            this.markEvaluationUC1.Location = new System.Drawing.Point(152, 0);
+            this.markEvaluationUC1.Name = "markEvaluationUC1";
+            this.markEvaluationUC1.Size = new System.Drawing.Size(715, 507);
+            this.markEvaluationUC1.TabIndex = 17;
             // 
             // Form1
             // 
@@ -539,6 +549,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(133)))), ((int)(((byte)(140)))));
             this.ClientSize = new System.Drawing.Size(866, 502);
+            this.Controls.Add(this.markEvaluationUC1);
             this.Controls.Add(this.manageEvaluationUC1);
             this.Controls.Add(this.assignAdvisorsUC1);
             this.Controls.Add(this.assignProjectUC1);
@@ -610,8 +621,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel logo_panel;
         private System.Windows.Forms.Button manageEvlBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button markEvlBtn;
         private ManageEvaluationUC manageEvaluationUC1;
+        private MarkEvaluationUC markEvaluationUC1;
     }
 }
 
