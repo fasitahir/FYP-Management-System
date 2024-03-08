@@ -79,48 +79,57 @@ namespace DBMidProject
 
         private void assignProjectBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(groupId_CB.Text))
+            try
             {
-                MessageBox.Show("Please Select group id");
-                return;
-            }
-            else if (id == 0)
-            {
-                MessageBox.Show("Please Select Poject from table");
-                return;
-            }
 
-            var con = Configuration.getInstance().getConnection();
-            SqlCommand check = new SqlCommand("SELECT COUNT(*) FROM GroupProject WHERE ProjectId = @ProjectId", con);
-            check.Parameters.AddWithValue("@ProjectId", id);
-            int groupIdCheck = (int)check.ExecuteScalar();
-            if (groupIdCheck > 0)
-            {
-                MessageBox.Show("Project already exist");
-                return;
-            }
 
-            SqlCommand check2 = new SqlCommand("SELECT COUNT(*) FROM GroupProject WHERE GroupId = @GroupId", con);
-            check2.Parameters.AddWithValue("@GroupId", int.Parse(groupId_CB.Text));
-            int projectIdCheck = (int)check2.ExecuteScalar();
-            if (projectIdCheck > 0)
-            {
-                MessageBox.Show("Group already exist");
-                return;
-            }
+                if (string.IsNullOrWhiteSpace(groupId_CB.Text))
+                {
+                    MessageBox.Show("Please Select group id");
+                    return;
+                }
+                else if (id == 0)
+                {
+                    MessageBox.Show("Please Select Poject from table");
+                    return;
+                }
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO GroupProject " +
-                "VALUES (@ProjectId, @GroupId, @AssignmentDate) ", con);
-            
-           
-            cmd.Parameters.AddWithValue("@GroupId",int.Parse(groupId_CB.Text));
-            cmd.Parameters.AddWithValue("@ProjectId", id);
-            cmd.Parameters.AddWithValue("@AssignmentDate", DateTime.Now);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Successfully saved");
-            ShowAssignedProjects();
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand check = new SqlCommand("SELECT COUNT(*) FROM GroupProject WHERE ProjectId = @ProjectId", con);
+                check.Parameters.AddWithValue("@ProjectId", id);
+                int groupIdCheck = (int)check.ExecuteScalar();
+                if (groupIdCheck > 0)
+                {
+                    MessageBox.Show("Project already exist");
+                    return;
+                }
+
+                SqlCommand check2 = new SqlCommand("SELECT COUNT(*) FROM GroupProject WHERE GroupId = @GroupId", con);
+                check2.Parameters.AddWithValue("@GroupId", int.Parse(groupId_CB.Text));
+                int projectIdCheck = (int)check2.ExecuteScalar();
+                if (projectIdCheck > 0)
+                {
+                    MessageBox.Show("Group already exist");
+                    return;
+                }
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO GroupProject " +
+                    "VALUES (@ProjectId, @GroupId, @AssignmentDate) ", con);
+
+
+                cmd.Parameters.AddWithValue("@GroupId", int.Parse(groupId_CB.Text));
+                cmd.Parameters.AddWithValue("@ProjectId", id);
+                cmd.Parameters.AddWithValue("@AssignmentDate", DateTime.Now);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Successfully saved");
+                ShowAssignedProjects();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex + "");
+            }
         }
-
         private void projectDataView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

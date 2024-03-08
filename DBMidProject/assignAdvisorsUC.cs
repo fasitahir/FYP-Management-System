@@ -158,60 +158,69 @@ namespace DBMidProject
         {
             string roleString = advRole_CB.Text.ToLower();
             int role = 0;
-
-            var con = Configuration.getInstance().getConnection();
-            SqlCommand check = new SqlCommand("SELECT COUNT(*) " +
-                "FROM ProjectAdvisor " +
-                "WHERE @AdvisorId = AdvisorId", con);
-            check.Parameters.AddWithValue("@AdvisorId", advisorId);
-            int checkId = (int)check.ExecuteScalar();
-            if (checkId > 0)
+            try
             {
-                MessageBox.Show("Advisors can not be repeated");
-                return;
-            }
-
-            if (roleString == "main advisor")
-            {
-                role = 11;
-            }
-            else if(roleString == "co-advisor")
-            {
-                role = 12;
-            }
-            else if(roleString == "industry advisor")
-            {
-                role = 13;
-            }
-            else
-            {
-                MessageBox.Show("Please select a valid advisor role");
-                return;
-            }
-
-            SqlCommand cmd = new SqlCommand("INSERT INTO ProjectAdvisor " +
-                "VALUES (@AdvisorId, @ProjectId, @AdvisorRole, @AssignmentDate) ", con);
-            
-            if(projectId == 0)
-            {
-                MessageBox.Show("Please select a project from the table");
-                return;
-            }
-            if(advisorId == 0)
-            {
-                MessageBox.Show("Please select a advisor from the table");
-                return;
-            }
-            cmd.Parameters.AddWithValue("@ProjectId", projectId);
-            cmd.Parameters.AddWithValue("@AdvisorId", advisorId);
-            cmd.Parameters.AddWithValue("@AdvisorRole", role);
-
-            cmd.Parameters.AddWithValue("@AssignmentDate", DateTime.Now);
 
 
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Saved Successfully");
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand check = new SqlCommand("SELECT COUNT(*) " +
+                    "FROM ProjectAdvisor " +
+                    "WHERE @AdvisorId = AdvisorId AND @ProjectId = ProjectId", con);
+                check.Parameters.AddWithValue("@AdvisorId", advisorId);
+                check.Parameters.AddWithValue("@ProjectId", projectId);
 
+                int checkId = (int)check.ExecuteScalar();
+                if (checkId > 0)
+                {
+                    MessageBox.Show("Advisors can not be assign same advisor to same project more than one time");
+                    return;
+                }
+
+                if (roleString == "main advisor")
+                {
+                    role = 11;
+                }
+                else if (roleString == "co-advisor")
+                {
+                    role = 12;
+                }
+                else if (roleString == "industry advisor")
+                {
+                    role = 13;
+                }
+                else
+                {
+                    MessageBox.Show("Please select a valid advisor role");
+                    return;
+                }
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO ProjectAdvisor " +
+                    "VALUES (@AdvisorId, @ProjectId, @AdvisorRole, @AssignmentDate) ", con);
+
+                if (projectId == 0)
+                {
+                    MessageBox.Show("Please select a project from the table");
+                    return;
+                }
+                if (advisorId == 0)
+                {
+                    MessageBox.Show("Please select a advisor from the table");
+                    return;
+                }
+                cmd.Parameters.AddWithValue("@ProjectId", projectId);
+                cmd.Parameters.AddWithValue("@AdvisorId", advisorId);
+                cmd.Parameters.AddWithValue("@AdvisorRole", role);
+
+                cmd.Parameters.AddWithValue("@AssignmentDate", DateTime.Now);
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Saved Successfully");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex + "");
+            }
         }
 
 
