@@ -35,26 +35,28 @@
             this.addStd_btn = new System.Windows.Forms.Button();
             this.viewStd_btn = new System.Windows.Forms.Button();
             this.sidemenu_panel = new System.Windows.Forms.Panel();
-            this.markEvlBtn = new System.Windows.Forms.Button();
-            this.manageEvlBtn = new System.Windows.Forms.Button();
+            this.genRepBtn = new System.Windows.Forms.Button();
             this.projectSubmenu = new System.Windows.Forms.Panel();
             this.viewDelBtn = new System.Windows.Forms.Button();
             this.addUptBtn = new System.Windows.Forms.Button();
             this.manageProjBtn = new System.Windows.Forms.Button();
+            this.markEvlBtn = new System.Windows.Forms.Button();
+            this.manageEvlBtn = new System.Windows.Forms.Button();
             this.groupSidemenu = new System.Windows.Forms.Panel();
             this.viewDelGrp = new System.Windows.Forms.Button();
             this.addUptGrp = new System.Windows.Forms.Button();
             this.assignProjectBtn = new System.Windows.Forms.Button();
             this.manageGrp = new System.Windows.Forms.Button();
             this.manageAdvBtn = new System.Windows.Forms.Button();
+            this.logo_panel = new System.Windows.Forms.Panel();
             this.assignAdvisorBtn = new System.Windows.Forms.Button();
             this.advSubmenu = new System.Windows.Forms.Panel();
             this.updateAdvBtn = new System.Windows.Forms.Button();
             this.addAdvBtn = new System.Windows.Forms.Button();
             this.viewAdvBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.logo_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reportsUC1 = new DBMidProject.reportsUC();
             this.manageEvaluationUC1 = new DBMidProject.ManageEvaluationUC();
             this.assignAdvisorsUC1 = new DBMidProject.assignAdvisorsUC();
             this.assignProjectUC1 = new DBMidProject.assignProjectUC();
@@ -70,11 +72,13 @@
             this.manageStd1 = new DBMidProject.AddStd();
             this.viewAllStdUC1 = new DBMidProject.ViewAllStdUC();
             this.markEvaluationUC1 = new DBMidProject.MarkEvaluationUC();
+            this.reportsUC2 = new DBMidProject.reportsUC();
             this.stdSubMenu.SuspendLayout();
             this.sidemenu_panel.SuspendLayout();
             this.projectSubmenu.SuspendLayout();
             this.groupSidemenu.SuspendLayout();
             this.advSubmenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ManageStd
@@ -82,7 +86,7 @@
             this.ManageStd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.ManageStd.FlatAppearance.BorderSize = 0;
             this.ManageStd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageStd.Location = new System.Drawing.Point(0, 131);
+            this.ManageStd.Location = new System.Drawing.Point(0, 128);
             this.ManageStd.Name = "ManageStd";
             this.ManageStd.Size = new System.Drawing.Size(150, 29);
             this.ManageStd.TabIndex = 0;
@@ -99,7 +103,7 @@
             this.stdSubMenu.Controls.Add(this.updateStd_btn);
             this.stdSubMenu.Controls.Add(this.addStd_btn);
             this.stdSubMenu.Controls.Add(this.viewStd_btn);
-            this.stdSubMenu.Location = new System.Drawing.Point(83, 160);
+            this.stdSubMenu.Location = new System.Drawing.Point(83, 157);
             this.stdSubMenu.Name = "stdSubMenu";
             this.stdSubMenu.Size = new System.Drawing.Size(67, 115);
             this.stdSubMenu.TabIndex = 1;
@@ -159,10 +163,11 @@
             // sidemenu_panel
             // 
             this.sidemenu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(105)))), ((int)(((byte)(110)))));
-            this.sidemenu_panel.Controls.Add(this.markEvlBtn);
-            this.sidemenu_panel.Controls.Add(this.manageEvlBtn);
+            this.sidemenu_panel.Controls.Add(this.genRepBtn);
             this.sidemenu_panel.Controls.Add(this.projectSubmenu);
             this.sidemenu_panel.Controls.Add(this.manageProjBtn);
+            this.sidemenu_panel.Controls.Add(this.markEvlBtn);
+            this.sidemenu_panel.Controls.Add(this.manageEvlBtn);
             this.sidemenu_panel.Controls.Add(this.groupSidemenu);
             this.sidemenu_panel.Controls.Add(this.assignProjectBtn);
             this.sidemenu_panel.Controls.Add(this.manageGrp);
@@ -178,38 +183,25 @@
             this.sidemenu_panel.TabIndex = 3;
             this.sidemenu_panel.Click += new System.EventHandler(this.sidemenu_panel_Click);
             // 
-            // markEvlBtn
+            // genRepBtn
             // 
-            this.markEvlBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.markEvlBtn.FlatAppearance.BorderSize = 0;
-            this.markEvlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.markEvlBtn.Location = new System.Drawing.Point(1, 471);
-            this.markEvlBtn.Name = "markEvlBtn";
-            this.markEvlBtn.Size = new System.Drawing.Size(150, 29);
-            this.markEvlBtn.TabIndex = 12;
-            this.markEvlBtn.Text = "Mark Evaluation";
-            this.markEvlBtn.UseVisualStyleBackColor = false;
-            this.markEvlBtn.Click += new System.EventHandler(this.markEvlBtn_Click);
-            // 
-            // manageEvlBtn
-            // 
-            this.manageEvlBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.manageEvlBtn.FlatAppearance.BorderSize = 0;
-            this.manageEvlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageEvlBtn.Location = new System.Drawing.Point(3, 436);
-            this.manageEvlBtn.Name = "manageEvlBtn";
-            this.manageEvlBtn.Size = new System.Drawing.Size(150, 29);
-            this.manageEvlBtn.TabIndex = 11;
-            this.manageEvlBtn.Text = "Manage Evaluation";
-            this.manageEvlBtn.UseVisualStyleBackColor = false;
-            this.manageEvlBtn.Click += new System.EventHandler(this.manageEvlBtn_Click);
+            this.genRepBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.genRepBtn.FlatAppearance.BorderSize = 0;
+            this.genRepBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.genRepBtn.Location = new System.Drawing.Point(0, 409);
+            this.genRepBtn.Name = "genRepBtn";
+            this.genRepBtn.Size = new System.Drawing.Size(150, 29);
+            this.genRepBtn.TabIndex = 13;
+            this.genRepBtn.Text = "Generate Reports";
+            this.genRepBtn.UseVisualStyleBackColor = false;
+            this.genRepBtn.Click += new System.EventHandler(this.genRepBtn_Click);
             // 
             // projectSubmenu
             // 
             this.projectSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(95)))), ((int)(((byte)(99)))));
             this.projectSubmenu.Controls.Add(this.viewDelBtn);
             this.projectSubmenu.Controls.Add(this.addUptBtn);
-            this.projectSubmenu.Location = new System.Drawing.Point(80, 266);
+            this.projectSubmenu.Location = new System.Drawing.Point(79, 226);
             this.projectSubmenu.Name = "projectSubmenu";
             this.projectSubmenu.Size = new System.Drawing.Size(70, 59);
             this.projectSubmenu.TabIndex = 7;
@@ -245,7 +237,7 @@
             this.manageProjBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.manageProjBtn.FlatAppearance.BorderSize = 0;
             this.manageProjBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageProjBtn.Location = new System.Drawing.Point(0, 239);
+            this.manageProjBtn.Location = new System.Drawing.Point(-1, 199);
             this.manageProjBtn.Name = "manageProjBtn";
             this.manageProjBtn.Size = new System.Drawing.Size(150, 29);
             this.manageProjBtn.TabIndex = 7;
@@ -253,12 +245,38 @@
             this.manageProjBtn.UseVisualStyleBackColor = false;
             this.manageProjBtn.Click += new System.EventHandler(this.manageProjBtn_Click);
             // 
+            // markEvlBtn
+            // 
+            this.markEvlBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.markEvlBtn.FlatAppearance.BorderSize = 0;
+            this.markEvlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markEvlBtn.Location = new System.Drawing.Point(0, 374);
+            this.markEvlBtn.Name = "markEvlBtn";
+            this.markEvlBtn.Size = new System.Drawing.Size(150, 29);
+            this.markEvlBtn.TabIndex = 12;
+            this.markEvlBtn.Text = "Mark Evaluation";
+            this.markEvlBtn.UseVisualStyleBackColor = false;
+            this.markEvlBtn.Click += new System.EventHandler(this.markEvlBtn_Click);
+            // 
+            // manageEvlBtn
+            // 
+            this.manageEvlBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.manageEvlBtn.FlatAppearance.BorderSize = 0;
+            this.manageEvlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageEvlBtn.Location = new System.Drawing.Point(0, 339);
+            this.manageEvlBtn.Name = "manageEvlBtn";
+            this.manageEvlBtn.Size = new System.Drawing.Size(150, 29);
+            this.manageEvlBtn.TabIndex = 11;
+            this.manageEvlBtn.Text = "Manage Evaluation";
+            this.manageEvlBtn.UseVisualStyleBackColor = false;
+            this.manageEvlBtn.Click += new System.EventHandler(this.manageEvlBtn_Click);
+            // 
             // groupSidemenu
             // 
             this.groupSidemenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(95)))), ((int)(((byte)(99)))));
             this.groupSidemenu.Controls.Add(this.viewDelGrp);
             this.groupSidemenu.Controls.Add(this.addUptGrp);
-            this.groupSidemenu.Location = new System.Drawing.Point(80, 322);
+            this.groupSidemenu.Location = new System.Drawing.Point(79, 263);
             this.groupSidemenu.Name = "groupSidemenu";
             this.groupSidemenu.Size = new System.Drawing.Size(70, 59);
             this.groupSidemenu.TabIndex = 8;
@@ -294,7 +312,7 @@
             this.assignProjectBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.assignProjectBtn.FlatAppearance.BorderSize = 0;
             this.assignProjectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.assignProjectBtn.Location = new System.Drawing.Point(1, 346);
+            this.assignProjectBtn.Location = new System.Drawing.Point(-1, 269);
             this.assignProjectBtn.Name = "assignProjectBtn";
             this.assignProjectBtn.Size = new System.Drawing.Size(150, 29);
             this.assignProjectBtn.TabIndex = 9;
@@ -307,7 +325,7 @@
             this.manageGrp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.manageGrp.FlatAppearance.BorderSize = 0;
             this.manageGrp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageGrp.Location = new System.Drawing.Point(0, 293);
+            this.manageGrp.Location = new System.Drawing.Point(-1, 234);
             this.manageGrp.Name = "manageGrp";
             this.manageGrp.Size = new System.Drawing.Size(150, 29);
             this.manageGrp.TabIndex = 8;
@@ -320,7 +338,7 @@
             this.manageAdvBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.manageAdvBtn.FlatAppearance.BorderSize = 0;
             this.manageAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageAdvBtn.Location = new System.Drawing.Point(1, 183);
+            this.manageAdvBtn.Location = new System.Drawing.Point(0, 164);
             this.manageAdvBtn.Name = "manageAdvBtn";
             this.manageAdvBtn.Size = new System.Drawing.Size(150, 29);
             this.manageAdvBtn.TabIndex = 3;
@@ -328,12 +346,24 @@
             this.manageAdvBtn.UseVisualStyleBackColor = false;
             this.manageAdvBtn.Click += new System.EventHandler(this.manageAdvBtn_Click);
             // 
+            // logo_panel
+            // 
+            this.logo_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(128)))));
+            this.logo_panel.BackgroundImage = global::DBMidProject.Properties.Resources.cs_logo;
+            this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logo_panel.Location = new System.Drawing.Point(0, 0);
+            this.logo_panel.Name = "logo_panel";
+            this.logo_panel.Size = new System.Drawing.Size(153, 100);
+            this.logo_panel.TabIndex = 2;
+            this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
+            // 
             // assignAdvisorBtn
             // 
             this.assignAdvisorBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.assignAdvisorBtn.FlatAppearance.BorderSize = 0;
             this.assignAdvisorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.assignAdvisorBtn.Location = new System.Drawing.Point(1, 392);
+            this.assignAdvisorBtn.Location = new System.Drawing.Point(-1, 304);
             this.assignAdvisorBtn.Name = "assignAdvisorBtn";
             this.assignAdvisorBtn.Size = new System.Drawing.Size(150, 29);
             this.assignAdvisorBtn.TabIndex = 10;
@@ -347,7 +377,7 @@
             this.advSubmenu.Controls.Add(this.updateAdvBtn);
             this.advSubmenu.Controls.Add(this.addAdvBtn);
             this.advSubmenu.Controls.Add(this.viewAdvBtn);
-            this.advSubmenu.Location = new System.Drawing.Point(80, 213);
+            this.advSubmenu.Location = new System.Drawing.Point(79, 194);
             this.advSubmenu.Name = "advSubmenu";
             this.advSubmenu.Size = new System.Drawing.Size(68, 88);
             this.advSubmenu.TabIndex = 6;
@@ -401,27 +431,23 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "FYP Management System";
             // 
-            // logo_panel
-            // 
-            this.logo_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(128)))));
-            this.logo_panel.BackgroundImage = global::DBMidProject.Properties.Resources.cs_logo;
-            this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logo_panel.Location = new System.Drawing.Point(0, 0);
-            this.logo_panel.Name = "logo_panel";
-            this.logo_panel.Size = new System.Drawing.Size(153, 100);
-            this.logo_panel.TabIndex = 2;
-            this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(133)))), ((int)(((byte)(140)))));
             this.panel1.BackgroundImage = global::DBMidProject.Properties.Resources.main;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.reportsUC1);
             this.panel1.Location = new System.Drawing.Point(153, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(717, 410);
             this.panel1.TabIndex = 11;
+            // 
+            // reportsUC1
+            // 
+            this.reportsUC1.Location = new System.Drawing.Point(221, 96);
+            this.reportsUC1.Name = "reportsUC1";
+            this.reportsUC1.Size = new System.Drawing.Size(715, 507);
+            this.reportsUC1.TabIndex = 0;
             // 
             // manageEvaluationUC1
             // 
@@ -543,12 +569,20 @@
             this.markEvaluationUC1.Size = new System.Drawing.Size(715, 507);
             this.markEvaluationUC1.TabIndex = 17;
             // 
+            // reportsUC2
+            // 
+            this.reportsUC2.Location = new System.Drawing.Point(152, 0);
+            this.reportsUC2.Name = "reportsUC2";
+            this.reportsUC2.Size = new System.Drawing.Size(715, 507);
+            this.reportsUC2.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(133)))), ((int)(((byte)(140)))));
             this.ClientSize = new System.Drawing.Size(866, 502);
+            this.Controls.Add(this.reportsUC2);
             this.Controls.Add(this.markEvaluationUC1);
             this.Controls.Add(this.manageEvaluationUC1);
             this.Controls.Add(this.assignAdvisorsUC1);
@@ -575,6 +609,7 @@
             this.projectSubmenu.ResumeLayout(false);
             this.groupSidemenu.ResumeLayout(false);
             this.advSubmenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -624,6 +659,9 @@
         private System.Windows.Forms.Button markEvlBtn;
         private ManageEvaluationUC manageEvaluationUC1;
         private MarkEvaluationUC markEvaluationUC1;
+        private System.Windows.Forms.Button genRepBtn;
+        private reportsUC reportsUC1;
+        private reportsUC reportsUC2;
     }
 }
 

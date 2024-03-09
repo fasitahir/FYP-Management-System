@@ -39,6 +39,8 @@ namespace DBMidProject
             assignAdvisorsUC1.Hide();
             manageEvaluationUC1.Hide();
             markEvaluationUC1.Hide();
+            reportsUC2.Hide();
+            reportsUC1.Hide();
         }
         
         private void sidemenu_panel_Click(object sender, EventArgs e)
@@ -220,6 +222,13 @@ namespace DBMidProject
             markEvaluationUC1.Show();
             markEvaluationUC1.BringToFront();
             markEvaluationUC1.loadComboBox();
+        }
+
+        private void genRepBtn_Click(object sender, EventArgs e)
+        {
+            hideItems();
+            reportsUC2.Show();
+            reportsUC2.BringToFront();
         }
     }
 }
