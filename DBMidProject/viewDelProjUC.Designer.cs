@@ -47,9 +47,9 @@
             // 
             this.panel6.Controls.Add(this.projectDataView);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 251);
+            this.panel6.Location = new System.Drawing.Point(0, 284);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(665, 199);
+            this.panel6.Size = new System.Drawing.Size(715, 223);
             this.panel6.TabIndex = 76;
             // 
             // projectDataView
@@ -59,7 +59,7 @@
             this.projectDataView.Location = new System.Drawing.Point(0, 3);
             this.projectDataView.Name = "projectDataView";
             this.projectDataView.ReadOnly = true;
-            this.projectDataView.Size = new System.Drawing.Size(665, 196);
+            this.projectDataView.Size = new System.Drawing.Size(715, 220);
             this.projectDataView.TabIndex = 0;
             this.projectDataView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectDataView_CellClick);
             // 
@@ -67,7 +67,7 @@
             // 
             this.searchBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.searchBtn.Location = new System.Drawing.Point(432, 67);
+            this.searchBtn.Location = new System.Drawing.Point(462, 77);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(50, 21);
             this.searchBtn.TabIndex = 86;
@@ -78,7 +78,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(228, 87);
+            this.panel7.Location = new System.Drawing.Point(258, 97);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(180, 1);
             this.panel7.TabIndex = 85;
@@ -88,7 +88,7 @@
             this.searchBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(200)))));
             this.searchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchBar.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBar.Location = new System.Drawing.Point(228, 72);
+            this.searchBar.Location = new System.Drawing.Point(258, 82);
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(183, 16);
             this.searchBar.TabIndex = 83;
@@ -97,7 +97,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(169, 72);
+            this.label9.Location = new System.Drawing.Point(199, 82);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 84;
@@ -107,7 +107,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(222, 9);
+            this.label8.Location = new System.Drawing.Point(252, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(224, 32);
             this.label8.TabIndex = 82;
@@ -117,7 +117,7 @@
             // 
             this.noteLabel.AutoSize = true;
             this.noteLabel.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noteLabel.Location = new System.Drawing.Point(197, 234);
+            this.noteLabel.Location = new System.Drawing.Point(227, 244);
             this.noteLabel.Name = "noteLabel";
             this.noteLabel.Size = new System.Drawing.Size(302, 17);
             this.noteLabel.TabIndex = 89;
@@ -127,7 +127,7 @@
             // 
             this.viewCurrent_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewCurrent_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.viewCurrent_btn.Location = new System.Drawing.Point(60, 138);
+            this.viewCurrent_btn.Location = new System.Drawing.Point(90, 148);
             this.viewCurrent_btn.Name = "viewCurrent_btn";
             this.viewCurrent_btn.Size = new System.Drawing.Size(129, 23);
             this.viewCurrent_btn.TabIndex = 88;
@@ -139,7 +139,7 @@
             // 
             this.viewAllBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.viewAllBtn.Location = new System.Drawing.Point(471, 138);
+            this.viewAllBtn.Location = new System.Drawing.Point(501, 148);
             this.viewAllBtn.Name = "viewAllBtn";
             this.viewAllBtn.Size = new System.Drawing.Size(129, 23);
             this.viewAllBtn.TabIndex = 87;
@@ -151,7 +151,7 @@
             // 
             this.deleteBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deleteBtn.Location = new System.Drawing.Point(259, 194);
+            this.deleteBtn.Location = new System.Drawing.Point(289, 204);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(129, 23);
             this.deleteBtn.TabIndex = 90;
@@ -175,7 +175,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel6);
             this.Name = "viewDelProjUC";
-            this.Size = new System.Drawing.Size(665, 450);
+            this.Size = new System.Drawing.Size(715, 507);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.projectDataView)).EndInit();
             this.ResumeLayout(false);

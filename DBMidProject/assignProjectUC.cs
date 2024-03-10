@@ -31,7 +31,7 @@ namespace DBMidProject
         public void ShowProjectData()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select Id, Description, Title " +
+            SqlCommand cmd = new SqlCommand("Select Id, Title, Description " +
                "FROM Project P " +
                "WHERE Title NOT LIKE '%*'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -44,7 +44,7 @@ namespace DBMidProject
         private void searchBtn_Click_1(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("SELECT Id, Description, Title " +
+            SqlCommand cmd = new SqlCommand("SELECT Id, Title, Description " +
                 "FROM Project P " +
                 "WHERE Id LIKE @searchText " +
                 "OR LOWER(Description) LIKE LOWER(@searchText) " +
@@ -156,8 +156,16 @@ namespace DBMidProject
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-            sizeset();
+            sizeset2();
 
+        }
+
+        private void sizeset2()
+        {
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
     }
 }

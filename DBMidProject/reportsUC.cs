@@ -51,7 +51,7 @@ namespace DBMidProject
         {
             var con = Configuration.getInstance().getConnection();
             string query = @"
-                SELECT RegistrationNo, P.FirstName + ' ' + P.LastName As 'Student Name', P.Email As 'Student Email' , Proj.Title AS 'Project Title', P2.FirstName +' '+ P2.LastName AS 'Advisor Name', P2.Email AS 'Advisor Email'
+                SELECT RegistrationNo, P.FirstName As 'Student Name', P.Email As 'Student Email' , Proj.Title AS 'Project Title', P2.FirstName AS 'Advisor Name', P2.Email AS 'Advisor Email'
                 FROM Student S
                 JOIN Person P ON S.Id = P.Id 
                 JOIN GroupStudent GS ON GS.StudentId = S.Id
@@ -68,8 +68,8 @@ namespace DBMidProject
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             reportDataView.DataSource = dt;
-            sizeset();
             da.Fill(dt);
+            sizeset();
 
             AdvancedPdfGenerator.GeneratePdf(dt, "List of projects along with advisory board and list of students");
 
@@ -95,10 +95,10 @@ namespace DBMidProject
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             reportDataView.DataSource = dt;
-            sizeset();
             da.Fill(dt);
+            sizeset();
 
-            AdvancedPdfGenerator.GeneratePdf(dt, "Marks sheet of projects that shows the marks in each evaluation against each student and project");
+            AdvancedPdfGenerator.GeneratePdf(dt, "Marks Sheet");
 
         }
 
@@ -115,15 +115,15 @@ namespace DBMidProject
                     SELECT GS2.StudentId
                     FROM GroupStudent GS2
                     GROUP BY GS2.StudentId
-                    HAVING COUNT(GS2.GroupId) >= 2
+                    HAVING COUNT(GS2.GroupId) > 2
                 )";
 
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             reportDataView.DataSource = dt;
-            sizeset();
             da.Fill(dt);
+            sizeset();
 
             AdvancedPdfGenerator.GeneratePdf(dt, "Students who changed group more than 1 times");
 
@@ -146,8 +146,8 @@ namespace DBMidProject
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             reportDataView.DataSource = dt;
-            sizeset();
             da.Fill(dt);
+            sizeset();
 
             AdvancedPdfGenerator.GeneratePdf(dt, "Advisors with number of project they are supervising");
 
@@ -171,8 +171,8 @@ namespace DBMidProject
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             reportDataView.DataSource = dt;
-            sizeset();
             da.Fill(dt);
+            sizeset();
 
             AdvancedPdfGenerator.GeneratePdf(dt, "Group Which obtained highest marks in each evaluation");
 

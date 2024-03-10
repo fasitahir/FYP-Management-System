@@ -51,9 +51,9 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.projectDataView);
-            this.panel6.Location = new System.Drawing.Point(0, 233);
+            this.panel6.Location = new System.Drawing.Point(3, 290);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(322, 214);
+            this.panel6.Size = new System.Drawing.Size(329, 214);
             this.panel6.TabIndex = 77;
             // 
             // projectDataView
@@ -63,7 +63,7 @@
             this.projectDataView.Location = new System.Drawing.Point(0, 3);
             this.projectDataView.Name = "projectDataView";
             this.projectDataView.ReadOnly = true;
-            this.projectDataView.Size = new System.Drawing.Size(322, 211);
+            this.projectDataView.Size = new System.Drawing.Size(329, 211);
             this.projectDataView.TabIndex = 0;
             this.projectDataView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectDataView_CellClick);
             // 
@@ -121,7 +121,7 @@
             // 
             this.assignProjectBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.assignProjectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.assignProjectBtn.Location = new System.Drawing.Point(290, 166);
+            this.assignProjectBtn.Location = new System.Drawing.Point(288, 197);
             this.assignProjectBtn.Name = "assignProjectBtn";
             this.assignProjectBtn.Size = new System.Drawing.Size(99, 21);
             this.assignProjectBtn.TabIndex = 92;
@@ -132,7 +132,7 @@
             // groupId_CB
             // 
             this.groupId_CB.FormattingEnabled = true;
-            this.groupId_CB.Location = new System.Drawing.Point(290, 115);
+            this.groupId_CB.Location = new System.Drawing.Point(288, 146);
             this.groupId_CB.Name = "groupId_CB";
             this.groupId_CB.Size = new System.Drawing.Size(121, 21);
             this.groupId_CB.TabIndex = 93;
@@ -141,7 +141,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(217, 116);
+            this.label1.Location = new System.Drawing.Point(215, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 94;
@@ -150,9 +150,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(325, 233);
+            this.panel1.Location = new System.Drawing.Point(338, 290);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 214);
+            this.panel1.Size = new System.Drawing.Size(374, 214);
             this.panel1.TabIndex = 78;
             // 
             // dataGridView1
@@ -162,14 +162,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(337, 211);
+            this.dataGridView1.Size = new System.Drawing.Size(374, 211);
             this.dataGridView1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 203);
+            this.label2.Location = new System.Drawing.Point(109, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 30);
             this.label2.TabIndex = 95;
@@ -179,7 +179,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(408, 203);
+            this.label3.Location = new System.Drawing.Point(458, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 30);
             this.label3.TabIndex = 96;
@@ -203,7 +203,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel6);
             this.Name = "assignProjectUC";
-            this.Size = new System.Drawing.Size(665, 447);
+            this.Size = new System.Drawing.Size(715, 507);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.projectDataView)).EndInit();
             this.panel1.ResumeLayout(false);

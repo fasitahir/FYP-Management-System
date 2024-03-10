@@ -29,33 +29,6 @@ namespace DBMidProject
                 return;
             }
 
-            DateTime assignment = assignmentDate.Value;
-            if (assignment > DateTime.Now)
-            {
-                MessageBox.Show("Please select correct assignment date");
-                return;
-            }
-
-            /*string statusString = grpStatus.Text;
-
-            if (statusString.ToLower() == "active")
-            {
-                status = 3;
-            }
-            else if (statusString.ToLower() == "inactive")
-            {
-                status = 4;
-            }
-            else
-            {
-                status = 0;
-            }
-
-            if (status == 0)
-            {
-                MessageBox.Show("Please Select a valid status");
-                return;
-            }*/
 
             int checkCount = 0;
             var con = Configuration.getInstance().getConnection();
@@ -105,7 +78,7 @@ namespace DBMidProject
 
                 cmd2.Parameters.AddWithValue("@RegNo", regNos[i].Trim());
                 cmd2.Parameters.AddWithValue("@Status", 3);
-                cmd2.Parameters.AddWithValue("@AssignmentDate", assignment);
+                cmd2.Parameters.AddWithValue("@AssignmentDate", DateTime.Now);
                 cmd2.ExecuteNonQuery();
             }
 
@@ -149,7 +122,6 @@ namespace DBMidProject
                 string regNo = selectedRow.Cells["RegistrationNo"].Value.ToString();
                 string grpIdStr = selectedRow.Cells["GroupId"].Value.ToString();
                 string stdIdStr = selectedRow.Cells["StudentId"].Value.ToString();
-                string assignment = selectedRow.Cells["AssignmentDate"].Value.ToString();
                 string status = selectedRow.Cells["Status"].Value.ToString();
                
                 if(string.IsNullOrWhiteSpace(grpIdStr) || string.IsNullOrWhiteSpace(stdIdStr))
@@ -161,7 +133,6 @@ namespace DBMidProject
                 stdId = int.Parse(selectedRow.Cells["StudentId"].Value.ToString());
 
                 stdRegNo.Text = regNo;
-                assignmentDate.Value = DateTime.Parse(assignment);
                 grpStatus.Text = status;
 
             }
@@ -179,13 +150,6 @@ namespace DBMidProject
             string regNoString = stdRegNo.Text.ToString();
             string[] regNos = regNoString.Split(',');
 
-
-            DateTime assignment = assignmentDate.Value;
-            if (assignment > DateTime.Now)
-            {
-                MessageBox.Show("Please select correct assignment date");
-                return;
-            }
 
             string statusString = grpStatus.Text;
 
@@ -264,7 +228,7 @@ namespace DBMidProject
 
                     cmd2.Parameters.AddWithValue("@RegNo", regNos[i].Trim());
                     cmd2.Parameters.AddWithValue("@Status", status);
-                    cmd2.Parameters.AddWithValue("@AssignmentDate", assignment);
+                    cmd2.Parameters.AddWithValue("@AssignmentDate", DateTime.Now);
                     cmd2.Parameters.AddWithValue("@GroupId", groupId);
                     cmd2.ExecuteNonQuery();
                 }

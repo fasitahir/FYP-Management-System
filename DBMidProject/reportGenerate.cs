@@ -20,16 +20,16 @@ namespace DBMidProject
 
             PdfPage page = document.AddPage();
             // Increase the page width and height
-            page.Width = XUnit.FromInch(11);
+            page.Width = XUnit.FromInch(13);
             page.Height = XUnit.FromInch(11);
 
             XGraphics gfx = XGraphics.FromPdfPage(page);
 
-            XFont titleFont = new XFont("Arial", 18, XFontStyle.Bold);
-            XFont headingFont = new XFont("Arial", 14, XFontStyle.Bold);
-            XFont contentFont = new XFont("Arial", 12);
-            XFont tableHeaderFont = new XFont("Arial", 12, XFontStyle.Bold);
-            XFont tableFont = new XFont("Arial", 10);
+            XFont titleFont = new XFont("Times New Roman", 18, XFontStyle.Bold);
+            XFont headingFont = new XFont("Times New Roman", 14, XFontStyle.Bold);
+            XFont contentFont = new XFont("Times New Roman", 12);
+            XFont tableHeaderFont = new XFont("Times New Roman", 12, XFontStyle.Bold);
+            XFont tableFont = new XFont("Times New Roman", 10);
             XColor titleColor = XColors.DarkBlue;
             XColor tableHeaderColor = XColors.LightGray;
 
@@ -40,12 +40,11 @@ namespace DBMidProject
             double contentWidth = page.Width - marginLeft - marginRight;
 
             DrawCenteredText(gfx, titlePdf, titleFont, titleColor, page.Width, marginTop);
-            //DrawCenteredText(gfx, "Test PDF developed by Noor", contentFont, XColors.Black, page.Width, marginTop + 30);
 
             double tableY = DrawTableHeaders(gfx, dataTable, tableHeaderFont, tableHeaderColor, tableFont, marginLeft, marginTop + 60, contentWidth);
             DrawTableData(gfx, dataTable, tableFont, marginLeft, tableY, contentWidth);
 
-            string fileName = string.Empty;
+            string fileName = titlePdf;
             using (SaveFileDialog fdb = new SaveFileDialog())
             {
                 fdb.Filter = "pdf files (.pdf)|.pdf|All files(.) | . ";

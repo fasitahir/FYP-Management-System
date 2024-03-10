@@ -24,7 +24,7 @@ namespace DBMidProject
         private void searchBtn_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("SELECT Id, Description, Title " +
+            SqlCommand cmd = new SqlCommand("SELECT Id,  Title, Description " +
                 "FROM Project P " +
                 "WHERE Id LIKE @searchText " +
                 "OR LOWER(Description) LIKE LOWER(@searchText) " +
@@ -50,7 +50,7 @@ namespace DBMidProject
         public void ShowCurrentData()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select Id, Description, Title " +
+            SqlCommand cmd = new SqlCommand("SELECT Id,  Title, Description " +
                "FROM Project P " +
                "WHERE Title NOT LIKE '%*'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -64,7 +64,7 @@ namespace DBMidProject
         private void ShowAllData()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select Id, Description, Title " +
+            SqlCommand cmd = new SqlCommand("SELECT Id,  Title, Description " +
                "FROM Project P ", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

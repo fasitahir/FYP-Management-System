@@ -64,9 +64,10 @@ namespace DBMidProject
         private void ShowAllStudents()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select S.Id, RegistrationNo, FirstName, LastName, Contact, Email, DateOfBirth, Gender " +
+            SqlCommand cmd = new SqlCommand("Select S.Id, RegistrationNo, FirstName, LastName, Contact, Email, DateOfBirth, L.Value AS Gender " +
                 "FROM Student S " +
-                "JOIN Person P ON P.Id = S.Id ", con);
+                "JOIN Person P ON P.Id = S.Id " +
+                "JOIN Lookup L ON L.Id = P.Gender ", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -78,9 +79,10 @@ namespace DBMidProject
         public void ShowCurrentStudents()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select S.Id, RegistrationNo, FirstName, LastName, Contact, Email, DateOfBirth, Gender " +
+            SqlCommand cmd = new SqlCommand("Select S.Id, RegistrationNo, FirstName, LastName, Contact, Email, DateOfBirth,L.Value AS Gender " +
                 "FROM Student S " +
                 "JOIN Person P ON P.Id = S.Id " +
+                "JOIN Lookup L ON L.Id = P.Gender " +
                 "WHERE RegistrationNo NOT LIKE '%*'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

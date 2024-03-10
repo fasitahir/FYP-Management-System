@@ -47,7 +47,7 @@
             // 
             this.searchBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.searchBtn.Location = new System.Drawing.Point(270, 121);
+            this.searchBtn.Location = new System.Drawing.Point(296, 105);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(99, 23);
             this.searchBtn.TabIndex = 46;
@@ -59,7 +59,7 @@
             // 
             this.noteLabel.AutoSize = true;
             this.noteLabel.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noteLabel.Location = new System.Drawing.Point(217, 228);
+            this.noteLabel.Location = new System.Drawing.Point(248, 279);
             this.noteLabel.Name = "noteLabel";
             this.noteLabel.Size = new System.Drawing.Size(211, 17);
             this.noteLabel.TabIndex = 45;
@@ -68,7 +68,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(245, 103);
+            this.panel5.Location = new System.Drawing.Point(271, 87);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(180, 1);
             this.panel5.TabIndex = 44;
@@ -78,7 +78,7 @@
             this.searchBar.BackColor = System.Drawing.Color.PapayaWhip;
             this.searchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchBar.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBar.Location = new System.Drawing.Point(245, 88);
+            this.searchBar.Location = new System.Drawing.Point(271, 72);
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(183, 16);
             this.searchBar.TabIndex = 43;
@@ -87,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(192, 88);
+            this.label2.Location = new System.Drawing.Point(218, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 42;
@@ -97,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(190, 0);
+            this.label1.Location = new System.Drawing.Point(216, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 30);
             this.label1.TabIndex = 41;
@@ -107,7 +107,7 @@
             // 
             this.viewCurrent_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewCurrent_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.viewCurrent_btn.Location = new System.Drawing.Point(51, 171);
+            this.viewCurrent_btn.Location = new System.Drawing.Point(96, 187);
             this.viewCurrent_btn.Name = "viewCurrent_btn";
             this.viewCurrent_btn.Size = new System.Drawing.Size(129, 23);
             this.viewCurrent_btn.TabIndex = 40;
@@ -119,7 +119,7 @@
             // 
             this.allStdBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.allStdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.allStdBtn.Location = new System.Drawing.Point(474, 171);
+            this.allStdBtn.Location = new System.Drawing.Point(502, 187);
             this.allStdBtn.Name = "allStdBtn";
             this.allStdBtn.Size = new System.Drawing.Size(129, 23);
             this.allStdBtn.TabIndex = 39;
@@ -131,9 +131,9 @@
             // 
             this.panel1.Controls.Add(this.advisorDataView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 248);
+            this.panel1.Location = new System.Drawing.Point(0, 308);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(665, 199);
+            this.panel1.Size = new System.Drawing.Size(715, 199);
             this.panel1.TabIndex = 38;
             // 
             // advisorDataView
@@ -142,7 +142,7 @@
             this.advisorDataView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.advisorDataView.Location = new System.Drawing.Point(0, 0);
             this.advisorDataView.Name = "advisorDataView";
-            this.advisorDataView.Size = new System.Drawing.Size(665, 199);
+            this.advisorDataView.Size = new System.Drawing.Size(715, 199);
             this.advisorDataView.TabIndex = 0;
             this.advisorDataView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.advisorDataView_CellClick);
             // 
@@ -150,7 +150,7 @@
             // 
             this.deleteAdvBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.deleteAdvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deleteAdvBtn.Location = new System.Drawing.Point(261, 193);
+            this.deleteAdvBtn.Location = new System.Drawing.Point(292, 244);
             this.deleteAdvBtn.Name = "deleteAdvBtn";
             this.deleteAdvBtn.Size = new System.Drawing.Size(129, 23);
             this.deleteAdvBtn.TabIndex = 47;
@@ -174,7 +174,7 @@
             this.Controls.Add(this.allStdBtn);
             this.Controls.Add(this.panel1);
             this.Name = "ViewAdvisorUC";
-            this.Size = new System.Drawing.Size(665, 447);
+            this.Size = new System.Drawing.Size(715, 507);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.advisorDataView)).EndInit();
             this.ResumeLayout(false);

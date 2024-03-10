@@ -32,7 +32,7 @@ namespace DBMidProject
 
         private void sizesetAdvisor()
         {
-            for (int i = 0; i < projectDataView.Columns.Count; i++)
+            for (int i = 0; i < advisorDataView.Columns.Count; i++)
             {
                 advisorDataView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
@@ -40,7 +40,7 @@ namespace DBMidProject
 
         private void sizesetAssigned()
         {
-            for (int i = 0; i < projectDataView.Columns.Count; i++)
+            for (int i = 0; i < assignedDataView.Columns.Count; i++)
             {
                 assignedDataView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
@@ -186,7 +186,7 @@ namespace DBMidProject
                 }
                 else if (roleString == "industry advisor")
                 {
-                    role = 13;
+                    role = 14;
                 }
                 else
                 {
